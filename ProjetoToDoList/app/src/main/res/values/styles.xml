@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- fragment_home_to_do_list -->
+
+    <!-- Estilo para color de fundo do Titulo e Imagem Principal -->
+    <style name="ViewBackground">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:background">@color/fundoBarra</item>
+    </style>
+
+    <!-- Estilo para o título -->
+    <style name="TitleText">
+        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Estilo para o ícone do Titulo -->
+    <style name="ImageTitulo">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+    </style>
+
+    <!-- Estilo para o EditText de adicionar tarefa -->
+    <style name="AddTaskEditText">
+        <item name="android:textColor">@color/letraColor</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_marginTop">12sp</item>
+        <item name="android:padding">12sp</item>
+        <item name="android:titleMarginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Estilo para o botão de criar tarefa -->
+    <style name="AddButton">
+        <item name="android:backgroundTint">@color/addButton</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Estilo para o TextView Tarefas Criadas -->
+    <style name="TaskText">
+        <item name="android:textColor">@color/addButton</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Estilo para linha -->
+    <style name="Viewlinha">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">@color/fundoBarra</item>
+    </style>
+
+    <!-- Estilo para o ícone do botao de Editar Tarefa -->
+    <style name="ImageEditar">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!-- fragment_edit -->
+
+    <!-- Estilo para o título do texto fragment_edit -->
+    <style name="TaskTitleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/addButton</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <!-- Estilo para o EditText fragment_edit -->
+    <style name="TaskEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">98dp</item>
+        <item name="android:background">@drawable/aqua_borde</item>
+        <item name="android:hint">@string/exemploTarefa</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Estilo para o FloatingActionButton fragment_edit-->
+    <style name="EditNoteFab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">80dp</item>
+        <item name="android:backgroundTint">@color/addButton</item>
+        <item name="android:contentDescription">@string/saveButton</item>
+        <item name="android:src">@drawable/baseline_done_24</item>
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <!-- fragment_list -->
+    <!-- Estilo para o contêiner do ConstraintLayout fragment_list -->
+    <style name="TaskContainerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#9FE2BF</item>
+    </style>
+
+    <!-- Estilo para o CheckBox fragment_list -->
+    <style name="TaskCheckBoxStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:color">@color/titleColor</item>
+    </style>
+
+    <!-- Estilo para o TextView fragment_list -->
+    <style name="TaskTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textColor">@color/letraColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Estilo para o ImageView fragment_list -->
+    <style name="EditTaskImageViewStyle">
+        <item name="android:layout_width">19dp</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:src">@drawable/baseline_edit_24</item>
+    </style>
+
+    <!-- Estilo para o ImageView do botão de excluir tarefa fragment_list -->
+    <style name="DeleteTaskImageViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:src">@drawable/baseline_delete_24</item>
+    </style>
+
+</resources>

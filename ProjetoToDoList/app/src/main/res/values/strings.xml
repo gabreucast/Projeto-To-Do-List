@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nome do aplicativo -->
+    <string name="app_name">Lista de Tarefas</string>
+
+    <!-- Título da tela -->
+    <string name="title">Lista de tarefas</string>
+
+    <!-- Placeholder para adicionar tarefa -->
+    <string name="addEditText">Nova Tarefa</string>
+
+    <!-- Botão para adicionar tarefa -->
+    <string name="addButton">Adicionar Tarefa</string>
+
+    <!-- Título da lista de tarefas -->
+    <string name="createdTasks">Tarefas Criadas</string>
+
+    <!-- Botão para editar tarefa -->
+    <string name="editButton">Editar</string>
+
+    <!-- Título de edição de tarefa -->
+    <string name="editTask">Editar Tarefa</string>
+
+    <!-- Botão para salvar -->
+    <string name="saveButton">Salvar</string>
+
+    <!-- Exemplo de tarefa -->
+    <string name="exemploTarefa">Estudar para examen da 5ta feira</string>
+</resources>
