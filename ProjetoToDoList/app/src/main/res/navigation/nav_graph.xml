@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmenthometodolist2">
+    <fragment
+        android:id="@+id/fragmenthometodolist2"
+        android:name="com.gabreucast.projetotodolist.Fragmets.Hometodolist"
+        android:label="Fragmenthometodolist" >
+        <action
+            android:id="@+id/action_fragmenthometodolist2_to_fragment_principal_edit"
+            app:destination="@id/fragment_principal_edit" />
+        <action
+            android:id="@+id/action_fragmenthometodolist2_to_fragmentprincipalcompletedtask"
+            app:destination="@id/fragmentprincipalcompletedtask" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_principal_edit"
+        android:name="com.gabreucast.projetotodolist.Fragmets.fragment_principal_edit"
+        android:label="fragment_principal_edit" >
+        <action
+            android:id="@+id/action_fragment_principal_edit_to_fragmenthometodolist2"
+            app:destination="@id/fragmenthometodolist2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentprincipalcompletedtask"
+        android:name="com.gabreucast.projetotodolist.Fragmets.Fragmentprincipalcompletedtask"
+        android:label="Fragmentprincipalcompletedtask" >
+        <action
+            android:id="@+id/action_fragmentprincipalcompletedtask_to_fragmenthometodolist2"
+            app:destination="@id/fragmenthometodolist2" />
+    </fragment>
+</navigation>
