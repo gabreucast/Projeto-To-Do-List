@@ -35,7 +35,7 @@ class EditFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edit, container, false)
+        return inflater.inflate(R.layout.fragment_principal_edit, container, false)
     }
 
     companion object {
