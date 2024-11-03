@@ -21,18 +21,21 @@
         style="@style/TitleText"
         android:paddingBottom="30dp"
         android:text="@string/title"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/iconImageView"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Campo para adicionar uma nova tarefa -->
+    <!-- Image do App -->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iconImageView"
         style="@style/ImageTitulo"
-        android:layout_marginStart="308dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/baseline_list_alt_24"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@+id/blueBackground"
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <!-- EditText para adicionar uma nova tarefa -->
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/addtaskEditText"
         style="@style/AddTaskEditText"
@@ -40,7 +43,7 @@
         android:hint="@string/addEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/blueBackground" />
 
     <!-- Botão para adicionar uma tarefa -->
     <androidx.appcompat.widget.AppCompatButton
@@ -48,6 +51,7 @@
         style="@style/AddButton"
         android:drawableStart="@drawable/add_icone"
         android:text="@string/addButton"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addtaskEditText" />
@@ -69,16 +73,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
 
-    <!-- Lista de tarefas -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taskRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="470dp"
-        android:layout_marginTop="10dp"
+        style="@style/TaskRecyclerViewStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:listitem="@layout/fragment_list" />
+        tools:listitem="@layout/fragment_task_list" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
