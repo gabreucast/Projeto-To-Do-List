@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.gabreucast.projetotodolist.R
 
-class Hometodolist : Fragment() {
+class fragment_home_to_do_list : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
