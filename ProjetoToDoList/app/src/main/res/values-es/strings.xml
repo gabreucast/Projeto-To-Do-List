@@ -26,4 +26,7 @@
 
     <!-- Exemplo de tarefa -->
     <string name="exemploTarefa">Estudiar para el examen del jueves</string>
+
+    <!-- Status da tarefa: Deletada -->
+    <string name="statusDeleted">Borrada</string>
 </resources>
