@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.gabreucast.projetotodolist.R
 
 
-class Fragmentprincipalcompletedtask : Fragment() {
+class fragment_principal_completedtask : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
