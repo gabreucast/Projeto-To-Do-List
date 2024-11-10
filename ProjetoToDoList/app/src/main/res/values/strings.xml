@@ -24,6 +24,9 @@
     <!-- Botão para salvar -->
     <string name="saveButton">Salvar</string>
 
+    <!-- Exemplo de titulo da tarefa -->
+    <string name="exemploTituloTarefa">Estudar </string>
+
     <!-- Exemplo de tarefa -->
     <string name="exemploTarefa">Estudar para examen da 5ta feira</string>
 

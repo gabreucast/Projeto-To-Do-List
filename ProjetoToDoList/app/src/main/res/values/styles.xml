@@ -86,10 +86,22 @@
         <item name="android:layout_marginTop">15dp</item>
     </style>
 
-    <!-- style para o EditText fragment_edit -->
+    <!-- style para o EditText Titulo  fragment_edit -->
     <style name="TaskEditText">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/aqua_borde</item>
+        <item name="android:hint">@string/exemploTituloTarefa</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- style para o EditText Tarefa fragment_edit -->
+    <style name="TaskEditText2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/aqua_borde</item>
         <item name="android:hint">@string/exemploTarefa</item>
         <item name="android:maxLines">1</item>

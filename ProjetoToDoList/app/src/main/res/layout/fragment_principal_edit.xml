@@ -46,16 +46,23 @@
 
     <!-- Campo de edição da tarefa -->
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/taskTextView1"
+        android:id="@+id/titleTV"
         style="@style/TaskEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/addtaskEditText" />
+
+    <!-- Campo de edição da tarefa -->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/taskTV"
+        style="@style/TaskEditText2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTV" />
 
     <!-- Botão flutuante para salvar edições -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/editNoteFab"
         style="@style/EditNoteFab"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/taskTextView1" />
+        app:layout_constraintTop_toBottomOf="@id/taskTV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

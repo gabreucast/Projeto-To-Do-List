@@ -10,10 +10,10 @@
     <color name="letraColor">#FFFFFF</color>
 
     <!-- Cor de fundo barra To Do List -->
-    <color name="fundoBarra">#9FE2BF</color>
+    <color name="fundoBarra">#1535E6</color>
 
     <!-- Cor do botão de adicionar tarefa -->
-    <color name="addButton">#9FE2BF</color>
+    <color name="addButton">#1535E6</color>
 
     <!-- colors vermelho do icone lixeira -->
     <color name="deletedIconTint">#D32F2F</color>
