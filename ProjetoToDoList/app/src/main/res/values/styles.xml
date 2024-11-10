@@ -130,14 +130,25 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingStart">10dp</item>
         <item name="android:textColor">@color/letraColor</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_toEndOf">@id/checkTask1</item>
+    </style>
+
+    <!-- Style para los textos de tarea -->
+    <style name="TaskTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <!-- style para o ImageView do botão de editar tarefa fragment_list -->
     <style name="EditTaskImageViewStyle">
-        <item name="android:layout_width">19dp</item>
-        <item name="android:layout_height">26dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginEnd">12dp</item>
         <item name="android:src">@drawable/baseline_edit_24</item>
     </style>

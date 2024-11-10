@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="5dp"
     android:orientation="horizontal"
     android:padding="2dp"
@@ -23,12 +22,19 @@
             style="@style/TaskCheckBoxStyle"
             android:layout_alignParentStart="true" />
 
-        <!-- Texto da tarefa -->
+        <!-- Titulo da tarefa -->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/taskTextView1"
+            android:id="@+id/titleTV"
             style="@style/TaskTextViewStyle"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/checkTask1"
+            android:layout_toEndOf="@id/checkTask1"
+            android:text="Title Task" />
+
+            <!-- Texto da tarefa -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/taskTV"
+            style="@style/TaskTextView"
+            android:layout_below="@id/titleTV"
+            android:layout_toEndOf="@id/checkTask1"
             android:text="Task 1" />
 
         <!-- Botão para editar a tarefa -->
@@ -43,11 +49,12 @@
         <ImageView
             android:id="@+id/deleteTask1"
             style="@style/DeleteTaskImageViewStyle"
-            android:layout_alignParentEnd="@+id/editTask1"
+            android:layout_alignParentEnd="@id/editTask1"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:layout_toStartOf="@+id/editTask1"
+            android:layout_toStartOf="@id/editTask1"
             android:contentDescription="@string/buttonDeleteTask" />
     </RelativeLayout>
+
 
 </androidx.cardview.widget.CardView>
