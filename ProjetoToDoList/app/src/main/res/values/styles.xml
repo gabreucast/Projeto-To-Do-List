@@ -134,7 +134,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <!-- style para o ImageView fragment_list -->
+    <!-- style para o ImageView do botão de editar tarefa fragment_list -->
     <style name="EditTaskImageViewStyle">
         <item name="android:layout_width">19dp</item>
         <item name="android:layout_height">26dp</item>

@@ -29,4 +29,10 @@
 
     <!-- Status da tarefa: Deletada -->
     <string name="statusDeleted">Deleted</string>
+
+    <!-- Botão para excluir a tarefa -->
+    <string name="buttonDeleteTask">Delate Task Button</string>
+
+    <!-- Botão para editar a tarefa -->
+    <string name="buttonEditTask">Edit Task Button</string>
 </resources>
