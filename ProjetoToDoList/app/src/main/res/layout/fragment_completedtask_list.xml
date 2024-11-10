@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp"
-    android:layout_margin="12dp"
-    android:background="@color/fundoBarra">
+    android:layout_margin="2dp"
+    android:orientation="horizontal"
+    app:cardBackgroundColor="@color/cardview_shadow_end_color">
 
-    <!-- Título da nota deletada -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView"
-        style="@style/DeletedNoteTitleText"
-        android:text="Notas Deletadas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        style="@style/TaskContainerStyle"
+        android:layout_margin="12dp">
 
-    <!-- Ícone de deletada -->
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageView"
-        style="@style/DeletedIconImageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
+        <!-- Título da nota deletada -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTC"
+            style="@style/DeletedNoteTitleText"
+            android:text="Notas Deletadas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Indicador de status "Deletada" -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/statusTextView"
-        style="@style/DeletedStatusTextView"
-        android:text="Deletada"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
+        <!-- Ícone de deletada -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            style="@style/DeletedIconImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTC" />
 
-    <!-- Conteúdo da nota deletada -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/taskTVCT"
-        style="@style/DeletedNoteContentTextView"
-        android:text="Conteúdo da nota deletada 1"
-        app:layout_constraintStart_toEndOf="@id/imageView"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
+        <!-- Indicador de status "Deletada" -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/statusTextView"
+            style="@style/DeletedStatusTextView"
+            android:text="@string/statusDeleted"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Conteúdo da nota deletada -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/taskTV"
+            style="@style/DeletedNoteContentTextView"
+            android:text="Conteúdo da nota deletada 1"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/titleTC" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

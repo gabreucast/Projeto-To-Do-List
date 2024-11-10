@@ -26,6 +26,13 @@
 
     <!-- Exemplo de tarefa -->
     <string name="exemploTarefa">Estudar para examen da 5ta feira</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Status da tarefa: Deletada -->
+    <string name="statusDeleted">Deletada</string>
+
+    <!-- Botão para excluir a tarefa -->
+    <string name="buttonDeleteTask">Botão de Excluir Tarefa</string>
+
+    <!-- Botão para editar a tarefa -->
+    <string name="buttonEditTask">Botão de editar tarefa</string>
 </resources>
