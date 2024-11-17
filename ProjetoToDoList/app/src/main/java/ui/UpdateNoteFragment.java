@@ -1,4 +1,4 @@
-package com.gabreucast.projetotodolist;
+package ui;
 
 import android.app.Activity;
 

@@ -6,11 +6,11 @@ plugins {
 
 android {
     namespace = "com.gabreucast.projetotodolist"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.gabreucast.projetotodolist"
-        minSdk = 24
+        minSdk = 21   //Android 5.0 Lollipop
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
