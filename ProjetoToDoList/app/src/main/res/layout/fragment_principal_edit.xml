@@ -1,68 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context="ui.UpdateNoteFragment">
+    android:padding="20dp">
 
-    <!-- Fundo do Titulo e Imagem principal -->
-    <View
-        android:id="@+id/blueBackground"
-        style="@style/ViewBackground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Título da aplicação -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/titleTextView"
-        style="@style/TitleText"
-        android:paddingBottom="30dp"
-        android:text="@string/title"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="5dp"
-        app:layout_constraintStart_toEndOf="@+id/iconImageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Image do App -->
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iconImageView"
-        style="@style/ImageTitulo"
-        android:src="@drawable/baseline_list_alt_24"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="@+id/blueBackground"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <!-- Título da tarefa -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/addtaskEditText"
-        style="@style/TaskTitleText"
-        android:text="@string/editTask"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/blueBackground" />
 
     <!-- Campo de edição da tarefa -->
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/titleTV"
+        android:id="@+id/titleET"
         style="@style/TaskEditText"
+        android:layout_width="250dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addtaskEditText" />
-
-    <!-- Campo de edição da tarefa -->
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/taskTV"
-        style="@style/TaskEditText2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleTV" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Botão flutuante para salvar edições -->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/taskET"
+        style="@style/TaskEditText2"
+        android:layout_width="250dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleET" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="96dp"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taskET"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/editNoteFab"
         style="@style/EditNoteFab"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/taskTV" />
+        app:layout_constraintTop_toBottomOf="@id/taskET" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

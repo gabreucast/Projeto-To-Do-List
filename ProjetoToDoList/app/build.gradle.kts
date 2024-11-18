@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt") // Para Room y otras bibliotecas con anotaciones
+    id("kotlin-kapt")
 }
 
 android {
@@ -40,6 +40,9 @@ android {
 dependencies {
     // Room Database
     implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.navigation:navigation-fragment:2.8.4")
+    implementation("androidx.games:games-activity:3.0.5")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
 
     // Navegación

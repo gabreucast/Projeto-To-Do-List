@@ -3,9 +3,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import db.ListDao
-import model.User
+import model.ListEntity
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [ListEntity::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun listDao(): ListDao  // Cambié el nombre del método a listDao()
@@ -20,7 +20,9 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "app_database"
-                ).build()  // Base de datos construida sin `.allowMainThreadQueries()`
+                )
+                    .allowMainThreadQueries()
+                    .build()  //
                 INSTANCE = instance
                 instance
             }

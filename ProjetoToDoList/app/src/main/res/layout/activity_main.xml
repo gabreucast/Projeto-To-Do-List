@@ -35,16 +35,6 @@
         app:layout_constraintStart_toStartOf="@id/blueBackground"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- EditText para adicionar uma nova tarefa -->
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/addtaskEditText"
-        style="@style/AddTaskEditText"
-        android:background="@drawable/aqua_borde"
-        android:hint="@string/addEditText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/blueBackground" />
-
     <!-- Botão para adicionar uma tarefa -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addButton"
@@ -54,7 +44,7 @@
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addtaskEditText" />
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
 
     <!-- Título para a lista de tarefas -->
     <androidx.appcompat.widget.AppCompatTextView
@@ -83,6 +73,5 @@
         app:layout_constraintTop_toBottomOf="@id/line"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/fragment_task_list" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

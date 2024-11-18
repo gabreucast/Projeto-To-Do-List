@@ -114,7 +114,7 @@
     <style name="EditNoteFab">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">80dp</item>
+        <item name="android:layout_marginTop">50dp</item>
         <item name="android:backgroundTint">@color/addButton</item>
         <item name="android:contentDescription">@string/saveButton</item>
         <item name="android:src">@drawable/baseline_done_24</item>

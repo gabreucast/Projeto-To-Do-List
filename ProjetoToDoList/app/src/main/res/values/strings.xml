@@ -38,4 +38,5 @@
 
     <!-- Botão para editar a tarefa -->
     <string name="buttonEditTask">Botão de editar tarefa</string>
+    <string name="cancel">CANCELAR</string>
 </resources>

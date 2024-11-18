@@ -16,7 +16,7 @@
 
         <!-- Título da nota deletada -->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/titleTC"
+            android:id="@+id/titleTV"
             style="@style/DeletedNoteTitleText"
             android:text="Notas Deletadas"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             android:id="@+id/imageView"
             style="@style/DeletedIconImageView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/titleTC" />
+            app:layout_constraintTop_toBottomOf="@id/titleTV" />
 
         <!-- Indicador de status "Deletada" -->
         <androidx.appcompat.widget.AppCompatTextView
@@ -43,7 +43,7 @@
             style="@style/DeletedNoteContentTextView"
             android:text="Conteúdo da nota deletada 1"
             app:layout_constraintStart_toEndOf="@id/imageView"
-            app:layout_constraintTop_toBottomOf="@id/titleTC" />
+            app:layout_constraintTop_toBottomOf="@id/titleTV" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
