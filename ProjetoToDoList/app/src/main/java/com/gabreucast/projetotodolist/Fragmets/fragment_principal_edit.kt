@@ -1,3 +1,5 @@
+@file:Suppress("PackageDirectoryMismatch")
+
 package com.gabreucast.projetotodolist.Fragmets
 
 import android.os.Bundle
@@ -19,7 +21,7 @@ class FragmentPrincipalEdit : DialogFragment() {
         val cancelTextView = view.findViewById<TextView>(R.id.cancel)
 
         cancelTextView.setOnClickListener {
-            dismiss()  // Cierra el DialogFragment
+            dismiss()
         }
 
         return view

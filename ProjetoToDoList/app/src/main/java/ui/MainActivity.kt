@@ -3,7 +3,6 @@ package ui
 import com.gabreucast.projetotodolist.Fragmets.FragmentPrincipalEdit
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,31 +14,36 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: TaskAdapter
     private lateinit var itemList: MutableList<ListEntity>
-    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //viewModel.inicializarDataBase(applicationContext)
-
-
-        itemList = ArrayList<ListEntity>()
+        itemList = ArrayList()
         recyclerView = findViewById(R.id.taskRecyclerView)
-        recyclerView.setLayoutManager(LinearLayoutManager(this))
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
         adapter = TaskAdapter(itemList)
-        recyclerView.setAdapter(adapter)
+        recyclerView.adapter = adapter
 
+        adapter.onEditClick = { task ->
+            val fragment = FragmentPrincipalEdit()
+            val bundle = Bundle()
+            bundle.putString("title", task.title)
+            bundle.putString("task", task.task)
+            fragment.arguments = bundle
+            fragment.show(supportFragmentManager, "FragmentPrincipalEdit")
+        }
 
+        adapter.onDeleteClick = { task ->
+            itemList.remove(task)
+            adapter.updateList(itemList)
+        }
 
         val button = findViewById<Button>(R.id.addButton)
         button.setOnClickListener {
             val fragment = FragmentPrincipalEdit()
             fragment.show(supportFragmentManager, "com.gabreucast.projetotodolist.Fragmets.FragmentPrincipalEdit")
         }
-
-
     }
-
-
-}  //chave do MainActivity
+}

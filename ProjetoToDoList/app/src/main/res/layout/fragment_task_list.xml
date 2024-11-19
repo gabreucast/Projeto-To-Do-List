@@ -39,7 +39,7 @@
 
         <!-- Botão para editar a tarefa -->
         <ImageView
-            android:id="@+id/editTask1"
+            android:id="@+id/editTask"
             style="@style/EditTaskImageViewStyle"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
@@ -47,12 +47,12 @@
 
         <!-- Botão para excluir a tarefa -->
         <ImageView
-            android:id="@+id/deleteTask1"
+            android:id="@+id/deleteTask"
             style="@style/DeleteTaskImageViewStyle"
-            android:layout_alignParentEnd="@id/editTask1"
+            android:layout_alignParentEnd="@id/editTask"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:layout_toStartOf="@id/editTask1"
+            android:layout_toStartOf="@id/editTask"
             android:contentDescription="@string/buttonDeleteTask" />
     </RelativeLayout>
 

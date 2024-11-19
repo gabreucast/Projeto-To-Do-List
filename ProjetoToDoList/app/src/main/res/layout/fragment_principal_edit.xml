@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:padding="20dp">
 
-
     <!-- Campo de edição da tarefa -->
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/titleET"

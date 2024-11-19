@@ -20,11 +20,4 @@ interface ListDao {
 
     @Insert
     fun insert(tasks: ListEntity)
-
-
-
-
-
-
-
 }
