@@ -88,7 +88,7 @@
 
     <!-- style para o EditText Titulo  fragment_edit -->
     <style name="TaskEditText">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/aqua_borde</item>
         <item name="android:hint">@string/exemploTituloTarefa</item>
@@ -100,7 +100,7 @@
 
     <!-- style para o EditText Tarefa fragment_edit -->
     <style name="TaskEditText2">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/aqua_borde</item>
         <item name="android:hint">@string/exemploTarefa</item>

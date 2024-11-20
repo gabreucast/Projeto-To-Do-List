@@ -15,7 +15,7 @@ class MainViewModel : ViewModel() {   /// chave do MainViewModel
 
     private lateinit var database: AppDatabase
 
-    private val users: MutableLiveData<List<ListEntity>> = MutableLiveData()
+    val users: MutableLiveData<List<ListEntity>> = MutableLiveData()
 
     fun inicializarDataBase(context: Context) {
         viewModelScope.launch(Dispatchers.IO) {
