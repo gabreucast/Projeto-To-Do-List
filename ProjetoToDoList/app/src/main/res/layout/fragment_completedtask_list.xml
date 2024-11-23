@@ -18,7 +18,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTV"
             style="@style/DeletedNoteTitleText"
-            android:text="Notas Deletadas"
+            android:text="@string/notas_deletadas"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +41,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/taskTV"
             style="@style/DeletedNoteContentTextView"
-            android:text="Conteúdo da nota deletada 1"
+            android:text="@string/task_deleted"
             app:layout_constraintStart_toEndOf="@id/imageView"
             app:layout_constraintTop_toBottomOf="@id/titleTV" />
     </androidx.constraintlayout.widget.ConstraintLayout>

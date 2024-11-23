@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
+    id("com.google.devtools.ksp") version "2.0.21-1.0.27" // Actualizar KSP
 }
 
 android {
@@ -40,10 +40,10 @@ android {
 dependencies {
     // Room Database
     implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.navigation:navigation-fragment:2.8.4")
-    implementation("androidx.games:games-activity:3.0.5")
-    annotationProcessor("androidx.room:room-compiler:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    implementation("androidx.media3:media3-database:1.4.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")  // Puedes eliminar esta línea si usas KSP
+    ksp("androidx.room:room-compiler:2.6.1")  // Cambiar a la versión 2.6.1
 
     // Navegación
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.4")

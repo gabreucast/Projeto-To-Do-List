@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gabreucast.projetotodolist.R
 import model.ListEntity
 
+class TaskAdapter(private val taskList: MutableList<ListEntity>) :
+    RecyclerView.Adapter<TaskAdapter.TaskVH>() {
 
-class TaskAdapter(private val taskList: MutableList<ListEntity>) : RecyclerView.Adapter<TaskAdapter.TaskVH>() {
     var onEditClick: ((ListEntity) -> Unit)? = null
     var onDeleteClick: ((ListEntity) -> Unit)? = null
-
 
     inner class TaskVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTV: TextView = itemView.findViewById(R.id.titleTV)
@@ -23,7 +23,9 @@ class TaskAdapter(private val taskList: MutableList<ListEntity>) : RecyclerView.
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskVH {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.fragment_task_list, parent, false)
+        val itemView =
+            LayoutInflater.from(parent.context).
+            inflate(R.layout.fragment_task_list, parent, false)
         return TaskVH(itemView)
     }
 
@@ -35,19 +37,21 @@ class TaskAdapter(private val taskList: MutableList<ListEntity>) : RecyclerView.
         val currentTask = taskList[position]
         holder.titleTV.text = currentTask.title
         holder.taskTV.text = currentTask.task
+
+        // Mejorar la interacción de los botones (editar y eliminar)
         holder.editTask.setOnClickListener {
-            onEditClick?.invoke(currentTask)
+            onEditClick?.invoke(currentTask) // Llama al método de edición pasando la tarea
         }
         holder.deleteTask.setOnClickListener {
-            onDeleteClick?.invoke(currentTask)
+            onDeleteClick?.invoke(currentTask) // Llama al método de eliminación pasando la tarea
         }
     }
 
     fun updateList(newList: List<ListEntity>) {
-        taskList.clear()
-        taskList.addAll(newList)
-        notifyDataSetChanged()
+        if (taskList != newList) {
+            taskList.clear()
+            taskList.addAll(newList)
+            notifyDataSetChanged() // Notifica el adaptador para que se actualice
+        }
     }
 }
-
-

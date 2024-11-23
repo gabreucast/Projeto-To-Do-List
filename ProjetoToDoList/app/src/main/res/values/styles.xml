@@ -12,7 +12,7 @@
     <!-- style para o título -->
     <style name="TitleText">
         <item name="android:textColor">@color/titleColor</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -69,7 +69,7 @@
     <!-- style para o RecyclerView de tarefas fragment_task -->
     <style name="TaskRecyclerViewStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">470dp</item>
+        <item name="android:layout_height">0dp</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:clipToPadding">false</item>
         <item name="android:paddingBottom">16dp</item>
@@ -88,10 +88,10 @@
 
     <!-- style para o EditText Titulo  fragment_edit -->
     <style name="TaskEditText">
-        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/aqua_borde</item>
-        <item name="android:hint">@string/exemploTituloTarefa</item>
+        <item name="android:hint">@string/tituloHint</item>
         <item name="android:maxLines">1</item>
         <item name="android:padding">10dp</item>
         <item name="android:layout_marginTop">20dp</item>
@@ -103,7 +103,7 @@
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/aqua_borde</item>
-        <item name="android:hint">@string/exemploTarefa</item>
+        <item name="android:hint">@string/tarefaHint</item>
         <item name="android:maxLines">1</item>
         <item name="android:padding">12dp</item>
         <item name="android:layout_marginTop">20dp</item>
@@ -118,7 +118,6 @@
         <item name="android:backgroundTint">@color/addButton</item>
         <item name="android:contentDescription">@string/saveButton</item>
         <item name="android:src">@drawable/baseline_done_24</item>
-        <item name="android:tint">@color/white</item>
     </style>
 
     <!-- Fragmento para a lista de tarefas -->

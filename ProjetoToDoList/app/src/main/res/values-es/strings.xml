@@ -1,39 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Nome do aplicativo -->
+    <!-- Nombre de la aplicación -->
     <string name="app_name">Lista de Tareas</string>
 
-    <!-- Título da tela -->
-    <string name="title">Lista de tareas</string>
+    <!-- Título de la pantalla -->
+    <string name="title">Lista de Tareas</string>
 
-    <!-- Placeholder para adicionar tarefa -->
+    <!-- Marcador de posición para agregar una tarea -->
     <string name="addEditText">Nueva Tarea</string>
 
-    <!-- Botão para adicionar tarefa -->
+    <!-- Botón para agregar una tarea -->
     <string name="addButton">Agregar Tarea</string>
 
-    <!-- Título da lista de tarefas -->
+    <!-- Título de la lista de tareas -->
     <string name="createdTasks">Tareas Creadas</string>
 
-    <!-- Botão para editar tarefa -->
+    <!-- Botón para editar una tarea -->
     <string name="editButton">Editar</string>
 
-    <!-- Título de edição de tarefa -->
+    <!-- Título para la edición de una tarea -->
     <string name="editTask">Editar Tarea</string>
 
-    <!-- Botão para salvar -->
+    <!-- Botón para guardar -->
     <string name="saveButton">Guardar</string>
 
-    <!-- Exemplo de tarefa -->
-    <string name="exemploTarefa">Estudiar para el examen del jueves</string>
+    <!-- Ejemplo de título de tarea -->
+    <string name="tituloHint">Título</string>
 
-    <!-- Status da tarefa: Deletada -->
-    <string name="statusDeleted">Borrada</string>
+    <!-- Ejemplo de descripción de tarea -->
+    <string name="tarefaHint">Descripción</string>
 
-    <!-- Botão para excluir a tarefa -->
-    <string name="buttonDeleteTask">Botón de Excluir Tarea</string>
+    <!-- Estado de la tarea: Eliminada -->
+    <string name="statusDeleted">Eliminada</string>
 
-    <!-- Botão para editar a tarefa -->
-    <string name="buttonEditTask">Botón de editar tarea</string>
+    <!-- Botón para eliminar una tarea -->
+    <string name="buttonDeleteTask">Botón de Eliminar Tarea</string>
+
+    <!-- Botón para editar una tarea -->
+    <string name="buttonEditTask">Botón de Editar Tarea</string>
+
+    <!-- Botón para cancelar una acción -->
     <string name="cancel">CANCELAR</string>
+
+    <!-- Título de la sección de notas eliminadas -->
+    <string name="notas_deletadas">Notas Eliminadas</string>
+
+    <!-- Contenido de una nota eliminada -->
+    <string name="task_deleted">Contenido de la nota eliminada 1</string>
+
+    <!-- Nombre genérico de una tarea -->
+    <string name="task">Tarea 1</string>
+
+    <!-- Título genérico de una tarea -->
+    <string name="titleTask">Título de la Tarea</string>
 </resources>

@@ -1,13 +1,14 @@
 package ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.gabreucast.projetotodolist.R
 import com.gabreucast.projetotodolist.Fragmets.FragmentPrincipalEdit
+import com.gabreucast.projetotodolist.R
 import model.ListEntity
 
 class MainActivity : AppCompatActivity() {
@@ -17,15 +18,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var itemList: MutableList<ListEntity>
     private lateinit var viewModel: MainViewModel
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        viewModel.inicializarDataBase(applicationContext)
 
         itemList = ArrayList()
         recyclerView = findViewById(R.id.taskRecyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         adapter = TaskAdapter(itemList)
         recyclerView.adapter = adapter
@@ -35,11 +39,18 @@ class MainActivity : AppCompatActivity() {
                 itemList.clear()
                 itemList.addAll(it)
                 adapter.updateList(itemList)
+                adapter.notifyDataSetChanged()
             }
         }
 
-        viewModel.inicializarDataBase(applicationContext)
+        // Acção do botão addButton para adicionar uma tarefa
+        val button = findViewById<Button>(R.id.addButton)
+        button.setOnClickListener {
+            val fragment = FragmentPrincipalEdit()
+            fragment.show(supportFragmentManager, "FragmentPrincipalEdit")
+        }
 
+        // Acção do botão editTask para editar uma tarefa
         adapter.onEditClick = { task ->
             val fragment = FragmentPrincipalEdit()
             val bundle = Bundle()
@@ -49,81 +60,12 @@ class MainActivity : AppCompatActivity() {
             fragment.show(supportFragmentManager, "FragmentPrincipalEdit")
         }
 
+        // Acção do botão deleteTask para deletar uma tarefa
         adapter.onDeleteClick = { task ->
             viewModel.deleteUser(task)
         }
 
-        val button = findViewById<Button>(R.id.addButton)
-        button.setOnClickListener {
-            val fragment = FragmentPrincipalEdit()
-            fragment.show(supportFragmentManager, "FragmentPrincipalEdit")
-        }
+
     }
 }
 
-
-//package ui
-//
-//import com.gabreucast.projetotodolist.Fragmets.FragmentPrincipalEdit
-//import android.os.Bundle
-//import android.widget.Button
-//import androidx.appcompat.app.AppCompatActivity
-//import androidx.recyclerview.widget.LinearLayoutManager
-//import androidx.recyclerview.widget.RecyclerView
-//import androidx.room.Room
-//import com.gabreucast.projetotodolist.R
-//import db.AppDatabase
-//import model.ListEntity
-//
-//class MainActivity : AppCompatActivity() {
-//
-//    private lateinit var recyclerView: RecyclerView
-//    private lateinit var adapter: TaskAdapter
-//    private lateinit var itemList: MutableList<ListEntity>
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//
-//        itemList = ArrayList()
-//        recyclerView = findViewById(R.id.taskRecyclerView)
-//        recyclerView.layoutManager = LinearLayoutManager(this)
-//
-//        adapter = TaskAdapter(itemList)
-//        recyclerView.adapter = adapter
-//
-//
-//        val database = Room.databaseBuilder(
-//            this, AppDatabase::class.java, "app_database"
-//            ).allowMainThreadQueries()
-//            .build()
-//
-//        database.listDao().insert(ListEntity(title = "Estudiar", task = "Examen de Física"))
-//        database.listDao().insert(ListEntity(title = "Mercado", task = "Comprar papa y cebolla"))
-//
-//        val tasks = database.listDao().getAll()
-//        itemList.addAll(tasks)
-//        adapter.updateList(itemList)
-//
-//
-//        adapter.onEditClick = { task ->
-//            val fragment = FragmentPrincipalEdit()
-//            val bundle = Bundle()
-//            bundle.putString("title", task.title)
-//            bundle.putString("task", task.task)
-//            fragment.arguments = bundle
-//            fragment.show(supportFragmentManager, "FragmentPrincipalEdit")
-//        }
-//
-//        adapter.onDeleteClick = { task ->
-//            itemList.remove(task)
-//            adapter.updateList(itemList)
-//        }
-//
-//        val button = findViewById<Button>(R.id.addButton)
-//        button.setOnClickListener {
-//            val fragment = FragmentPrincipalEdit()
-//            fragment.show(supportFragmentManager, "com.gabreucast.projetotodolist.Fragmets.FragmentPrincipalEdit")
-//        }
-//    }
-//}

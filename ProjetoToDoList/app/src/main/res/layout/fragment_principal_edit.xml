@@ -9,8 +9,8 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/titleET"
         style="@style/TaskEditText"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -18,9 +18,9 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/taskET"
         style="@style/TaskEditText2"
-        android:layout_width="250dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="0dp"
         android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleET" />
 
@@ -37,6 +37,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/editNoteFab"
         style="@style/EditNoteFab"
+        app:tint="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/taskET" />
 

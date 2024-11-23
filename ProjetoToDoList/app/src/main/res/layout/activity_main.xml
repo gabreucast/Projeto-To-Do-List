@@ -19,10 +19,11 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/titleTextView"
         style="@style/TitleText"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:paddingBottom="30dp"
         android:text="@string/title"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/blueBackground"
         app:layout_constraintStart_toEndOf="@id/iconImageView"
         app:layout_constraintTop_toTopOf="parent" />
 

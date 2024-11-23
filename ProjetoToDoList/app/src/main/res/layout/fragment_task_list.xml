@@ -27,7 +27,7 @@
             android:id="@+id/titleTV"
             style="@style/TaskTextViewStyle"
             android:layout_toEndOf="@id/checkTask1"
-            android:text="Title Task" />
+            android:text="@string/titleTask" />
 
             <!-- Texto da tarefa -->
         <androidx.appcompat.widget.AppCompatTextView
@@ -35,7 +35,7 @@
             style="@style/TaskTextView"
             android:layout_below="@id/titleTV"
             android:layout_toEndOf="@id/checkTask1"
-            android:text="Task 1" />
+            android:text="@string/task" />
 
         <!-- Botão para editar a tarefa -->
         <ImageView

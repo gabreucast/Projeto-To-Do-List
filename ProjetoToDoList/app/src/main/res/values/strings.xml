@@ -25,10 +25,10 @@
     <string name="saveButton">Salvar</string>
 
     <!-- Exemplo de titulo da tarefa -->
-    <string name="exemploTituloTarefa">Estudar </string>
+    <string name="tituloHint">Titulo </string>
 
     <!-- Exemplo de tarefa -->
-    <string name="exemploTarefa">Estudar para examen da 5ta feira</string>
+    <string name="tarefaHint">Descrição</string>
 
     <!-- Status da tarefa: Deletada -->
     <string name="statusDeleted">Deletada</string>
@@ -38,5 +38,19 @@
 
     <!-- Botão para editar a tarefa -->
     <string name="buttonEditTask">Botão de editar tarefa</string>
+
+    <!-- Botão para cancelar ação -->
     <string name="cancel">CANCELAR</string>
+
+    <!-- Título da seção de notas deletadas -->
+    <string name="notas_deletadas">Notas Deletadas</string>
+
+    <!-- Conteúdo da nota deletada -->
+    <string name="task_deleted">Conteúdo da nota deletada 1</string>
+
+    <!-- Nome genérico da tarefa -->
+    <string name="task">Task 1</string>
+
+    <!-- Título genérico da tarefa -->
+    <string name="titleTask">Title Task</string>
 </resources>

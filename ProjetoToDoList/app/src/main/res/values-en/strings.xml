@@ -1,39 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Nome do aplicativo -->
+    <!-- Application name -->
     <string name="app_name">Task List</string>
 
-    <!-- Título da tela -->
+    <!-- Screen title -->
     <string name="title">Task List</string>
 
-    <!-- Placeholder para adicionar tarefa -->
+    <!-- Placeholder for adding a task -->
     <string name="addEditText">New Task</string>
 
-    <!-- Botão para adicionar tarefa -->
+    <!-- Button to add a task -->
     <string name="addButton">Add Task</string>
 
-    <!-- Título da lista de tarefas -->
+    <!-- Title of the task list -->
     <string name="createdTasks">Created Tasks</string>
 
-    <!-- Botão para editar tarefa -->
+    <!-- Button to edit a task -->
     <string name="editButton">Edit</string>
 
-    <!-- Título de edição de tarefa -->
+    <!-- Title for editing a task -->
     <string name="editTask">Edit Task</string>
 
-    <!-- Botão para salvar -->
+    <!-- Button to save -->
     <string name="saveButton">Save</string>
 
-    <!-- Exemplo de tarefa -->
-    <string name="exemploTarefa">Study for Thursday\'s exam</string>
+    <!-- Example of a task title -->
+    <string name="tituloHint">Title</string>
 
-    <!-- Status da tarefa: Deletada -->
+    <!-- Example of a task description -->
+    <string name="tarefaHint">Task Description</string>
+
+    <!-- Task status: Deleted -->
     <string name="statusDeleted">Deleted</string>
 
-    <!-- Botão para excluir a tarefa -->
-    <string name="buttonDeleteTask">Delate Task Button</string>
+    <!-- Button to delete a task -->
+    <string name="buttonDeleteTask">Delete Task Button</string>
 
-    <!-- Botão para editar a tarefa -->
+    <!-- Button to edit a task -->
     <string name="buttonEditTask">Edit Task Button</string>
-    <string name="cancel">CANCELAR</string>
+
+    <!-- Button to cancel an action -->
+    <string name="cancel">CANCEL</string>
+
+    <!-- Title of the deleted notes section -->
+    <string name="notas_deletadas">Deleted Notes</string>
+
+    <!-- Content of a deleted note -->
+    <string name="task_deleted">Deleted note content 1</string>
+
+    <!-- Generic task name -->
+    <string name="task">Task 1</string>
+
+    <!-- Generic task title -->
+    <string name="titleTask">Task Title</string>
 </resources>
