@@ -15,40 +15,40 @@ class MainViewModel : ViewModel() {   /// chave do MainViewModel
 
     private lateinit var database: AppDatabase
 
-    val users: MutableLiveData<List<ListEntity>> = MutableLiveData()
+    val task: MutableLiveData<List<ListEntity>> = MutableLiveData()
 
     fun inicializarDataBase(context: Context) {
         viewModelScope.launch(Dispatchers.IO) {
             database = AppDatabase.getDatabase(context)
-            listUser()
+            listTask()
         }
     }
 
-    private fun listUser() {
+    private fun listTask() {
         viewModelScope.launch(Dispatchers.IO) {
-            val listUsers = database.listDao().getAll()
-            users.postValue(listUsers)
+            val listTask = database.listDao().getAll()
+            task.postValue(listTask)
         }
     }
 
-    fun addUser(task: ListEntity) {
+    fun addTask(task: ListEntity) {
         viewModelScope.launch(Dispatchers.IO) {
             database.listDao().insert(task)
-            listUser()
+            listTask()
         }
     }
 
-    fun updateUser(task: ListEntity) {
+    fun updateTask(task: ListEntity) {
         viewModelScope.launch(Dispatchers.IO) {
             database.listDao().update(task)
-            listUser()
+            listTask()
         }
     }
 
-    fun deleteUser(task: ListEntity) {
+    fun deleteTask(task: ListEntity) {
         viewModelScope.launch(Dispatchers.IO) {
             database.listDao().delete(task)
-            listUser()
+            listTask()
         }
     }
 

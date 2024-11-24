@@ -3,6 +3,8 @@ package ui
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +15,7 @@ import model.ListEntity
 
 class MainActivity : AppCompatActivity() {
 
+    // Inicializa as variáveis
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: TaskAdapter
     private lateinit var itemList: MutableList<ListEntity>
@@ -23,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Inicializa o ViewModel
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         viewModel.inicializarDataBase(applicationContext)
 
@@ -31,10 +35,12 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
+        // Configura o adapter da RecyclerView
         adapter = TaskAdapter(itemList)
         recyclerView.adapter = adapter
 
-        viewModel.users.observe(this) { tasks ->
+        // Observa as mudanças nos dados
+        viewModel.task.observe(this) { tasks ->
             tasks?.let {
                 itemList.clear()
                 itemList.addAll(it)
@@ -43,29 +49,45 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Acção do botão addButton para adicionar uma tarefa
-        val button = findViewById<Button>(R.id.addButton)
-        button.setOnClickListener {
+        // Ação do botão de adicionar tarefa
+        val addbutton = findViewById<Button>(R.id.addButton)
+        addbutton.setOnClickListener {
             val fragment = FragmentPrincipalEdit()
+            val bundle = Bundle()
+            bundle.putBoolean("isEditing", false) // Indica que é para adicionar uma tarefa
+            fragment.arguments = bundle
             fragment.show(supportFragmentManager, "FragmentPrincipalEdit")
         }
 
-        // Acção do botão editTask para editar uma tarefa
+        // Ação do botão de editar tarefa
         adapter.onEditClick = { task ->
             val fragment = FragmentPrincipalEdit()
             val bundle = Bundle()
+            bundle.putBoolean("isEditing", true) // Indica que é para editar uma tarefa
             bundle.putString("title", task.title)
             bundle.putString("task", task.task)
             fragment.arguments = bundle
             fragment.show(supportFragmentManager, "FragmentPrincipalEdit")
         }
 
-        // Acção do botão deleteTask para deletar uma tarefa
+        // Ação do botão de excluir tarefa
         adapter.onDeleteClick = { task ->
-            viewModel.deleteUser(task)
+            val alertDialog = AlertDialog.Builder(this)
+                .setTitle(getString(R.string.confirm_title))
+                .setMessage(getString(R.string.confirm_message))
+                .setPositiveButton(getString(R.string.confirm_positive)) { dialog, which ->
+                    Toast.makeText(
+                        this,
+                        getString(R.string.confirm_taskdeleted),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    viewModel.deleteTask(task)
+                }
+                .setNegativeButton(getString(R.string.confirm_negative)) { dialog, which ->
+                    dialog.dismiss()
+                }
+                .create()
+            alertDialog.show()
         }
-
-
     }
 }
-

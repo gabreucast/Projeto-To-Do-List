@@ -6,51 +6,78 @@
     <!-- Título de la pantalla -->
     <string name="title">Lista de Tareas</string>
 
-    <!-- Marcador de posición para agregar una tarea -->
+    <!-- Placeholder para agregar una tarea -->
     <string name="addEditText">Nueva Tarea</string>
 
-    <!-- Botón para agregar una tarea -->
+    <!-- Texto del botón para agregar una nueva tarea -->
     <string name="addButton">Agregar Tarea</string>
 
-    <!-- Título de la lista de tareas -->
+    <!-- Título de la lista de tareas creadas -->
     <string name="createdTasks">Tareas Creadas</string>
 
-    <!-- Botón para editar una tarea -->
+    <!-- Texto del botón para editar una tarea -->
     <string name="editButton">Editar</string>
 
-    <!-- Título para la edición de una tarea -->
+    <!-- Título de la pantalla de edición de tarea -->
     <string name="editTask">Editar Tarea</string>
 
-    <!-- Botón para guardar -->
+    <!-- Texto del botón para guardar los cambios -->
     <string name="saveButton">Guardar</string>
 
-    <!-- Ejemplo de título de tarea -->
+    <!-- Ejemplo de título para una tarea -->
     <string name="tituloHint">Título</string>
 
-    <!-- Ejemplo de descripción de tarea -->
+    <!-- Ejemplo de descripción de una tarea -->
     <string name="tarefaHint">Descripción</string>
 
-    <!-- Estado de la tarea: Eliminada -->
+    <!-- Estado que indica que la tarea está eliminada -->
     <string name="statusDeleted">Eliminada</string>
 
-    <!-- Botón para eliminar una tarea -->
-    <string name="buttonDeleteTask">Botón de Eliminar Tarea</string>
+    <!-- Texto del botón para eliminar una tarea -->
+    <string name="buttonDeleteTask">Botón para Eliminar Tarea</string>
 
-    <!-- Botón para editar una tarea -->
-    <string name="buttonEditTask">Botón de Editar Tarea</string>
+    <!-- Texto del botón para editar una tarea -->
+    <string name="buttonEditTask">Botón para Editar Tarea</string>
 
-    <!-- Botón para cancelar una acción -->
+    <!-- Texto del botón para cancelar una acción -->
     <string name="cancel">CANCELAR</string>
 
-    <!-- Título de la sección de notas eliminadas -->
+    <!-- Título para la sección de notas eliminadas -->
     <string name="notas_deletadas">Notas Eliminadas</string>
 
-    <!-- Contenido de una nota eliminada -->
-    <string name="task_deleted">Contenido de la nota eliminada 1</string>
+    <!-- Texto que describe una tarea eliminada -->
+    <string name="task_deleted">Contenido de la tarea eliminada 1</string>
 
     <!-- Nombre genérico de una tarea -->
     <string name="task">Tarea 1</string>
 
     <!-- Título genérico de una tarea -->
     <string name="titleTask">Título de la Tarea</string>
+
+    <!-- Mensaje de error cuando faltan campos por llenar -->
+    <string name="inserir_campos">Por favor, rellene todos los campos.</string>
+
+    <!-- Mensaje de éxito cuando la tarea se guarda correctamente -->
+    <string name="tarefa_salva">¡Tarea guardada con éxito!</string>
+
+    <!-- Título del cuadro de diálogo de confirmación -->
+    <string name="confirm_title">Confirmación</string>
+
+    <!-- Mensaje del cuadro de diálogo de confirmación -->
+    <string name="confirm_message">¿Está seguro de que desea continuar?</string>
+
+    <!-- Texto del botón positivo en el cuadro de diálogo de confirmación -->
+    <string name="confirm_positive">Sí</string>
+
+    <!-- Texto del botón negativo en el cuadro de diálogo de confirmación -->
+    <string name="confirm_negative">No</string>
+
+    <!-- Mensaje indicando que la tarea fue eliminada -->
+    <string name="confirm_taskdeleted">¡Tarea eliminada!</string>
+
+    <!-- Texto del botón para agregar una nueva tarea -->
+    <string name="addTask">Agregar Tarea</string>
+    <string name="taskUpdated">Tarefa atualizada</string>
+
+
 </resources>

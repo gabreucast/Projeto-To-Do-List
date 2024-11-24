@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Application name -->
+    <!-- App name -->
     <string name="app_name">Task List</string>
 
     <!-- Screen title -->
@@ -9,48 +9,75 @@
     <!-- Placeholder for adding a task -->
     <string name="addEditText">New Task</string>
 
-    <!-- Button to add a task -->
+    <!-- Button text for adding a new task -->
     <string name="addButton">Add Task</string>
 
-    <!-- Title of the task list -->
+    <!-- Title for the list of created tasks -->
     <string name="createdTasks">Created Tasks</string>
 
-    <!-- Button to edit a task -->
+    <!-- Button text for editing a task -->
     <string name="editButton">Edit</string>
 
-    <!-- Title for editing a task -->
+    <!-- Title for the task editing screen -->
     <string name="editTask">Edit Task</string>
 
-    <!-- Button to save -->
+    <!-- Button text for saving changes -->
     <string name="saveButton">Save</string>
 
     <!-- Example of a task title -->
     <string name="tituloHint">Title</string>
 
     <!-- Example of a task description -->
-    <string name="tarefaHint">Task Description</string>
+    <string name="tarefaHint">Description</string>
 
-    <!-- Task status: Deleted -->
+    <!-- Status indicating the task is deleted -->
     <string name="statusDeleted">Deleted</string>
 
-    <!-- Button to delete a task -->
+    <!-- Button text for deleting a task -->
     <string name="buttonDeleteTask">Delete Task Button</string>
 
-    <!-- Button to edit a task -->
+    <!-- Button text for editing a task -->
     <string name="buttonEditTask">Edit Task Button</string>
 
-    <!-- Button to cancel an action -->
+    <!-- Button text for canceling an action -->
     <string name="cancel">CANCEL</string>
 
-    <!-- Title of the deleted notes section -->
+    <!-- Title for the deleted notes section -->
     <string name="notas_deletadas">Deleted Notes</string>
 
-    <!-- Content of a deleted note -->
-    <string name="task_deleted">Deleted note content 1</string>
+    <!-- Text for a deleted task -->
+    <string name="task_deleted">Deleted task content 1</string>
 
     <!-- Generic task name -->
     <string name="task">Task 1</string>
 
     <!-- Generic task title -->
     <string name="titleTask">Task Title</string>
+
+    <!-- Error message when fields are missing -->
+    <string name="inserir_campos">Please fill in all fields.</string>
+
+    <!-- Success message when the task is saved -->
+    <string name="tarefa_salva">Task saved successfully!</string>
+
+    <!-- Confirmation dialog title -->
+    <string name="confirm_title">Confirmation</string>
+
+    <!-- Confirmation dialog message -->
+    <string name="confirm_message">Are you sure you want to continue?</string>
+
+    <!-- Positive button text in the confirmation dialog -->
+    <string name="confirm_positive">Yes</string>
+
+    <!-- Negative button text in the confirmation dialog -->
+    <string name="confirm_negative">No</string>
+
+    <!-- Message indicating the task was deleted -->
+    <string name="confirm_taskdeleted">Task deleted!</string>
+
+    <!-- Button text for adding a new task -->
+    <string name="addTask">Add Task</string>
+    <string name="taskUpdated">Tarefa atualizada</string>
+
+
 </resources>
