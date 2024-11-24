@@ -15,8 +15,12 @@
     <!-- Cor do botão de adicionar tarefa -->
     <color name="addButton">#1535E6</color>
 
-    <!-- colors vermelho do icone lixeira -->
-    <color name="deletedIconTint">#D32F2F</color>
+    <!-- colors verde da tarefa feita -->
+    <color name="tarefaFeita">#8DF691</color>
+
+    <!-- colors verde do icone lixeira -->
+    <color name="doneIconTint">#DE0404</color>
+
 
 
 </resources>

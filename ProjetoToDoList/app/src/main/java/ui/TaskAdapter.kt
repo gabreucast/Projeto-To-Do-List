@@ -3,31 +3,60 @@ package ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gabreucast.projetotodolist.R
-import model.Task
+import model.ListEntity
 
-class TaskAdapter(private val userList: MutableList<Task>) : RecyclerView.Adapter<TaskAdapter.UserVH>() {
+class TaskAdapter(private val taskList: MutableList<ListEntity>) :
+    RecyclerView.Adapter<TaskAdapter.TaskVH>() {
 
-    inner class UserVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    var onEditClick: ((ListEntity) -> Unit)? = null
+    var onDeleteClick: ((ListEntity) -> Unit)? = null
+    var onTaskChecked: ((ListEntity) -> Unit)? = null
+
+    inner class TaskVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTV: TextView = itemView.findViewById(R.id.titleTV)
         val taskTV: TextView = itemView.findViewById(R.id.taskTV)
+        val deleteTask: ImageView = itemView.findViewById(R.id.deleteTask)
+        val editTask: ImageView = itemView.findViewById(R.id.editTask)
+        val checkTask: CheckBox = itemView.findViewById(R.id.checkTask)
+
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserVH {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskVH {
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.fragment_task_list, parent, false)
-        return UserVH(itemView)
+            LayoutInflater.from(parent.context).
+            inflate(R.layout.fragment_task_list, parent, false)
+        return TaskVH(itemView)
     }
 
     override fun getItemCount(): Int {
-        return userList.size
+        return taskList.size
     }
 
-    override fun onBindViewHolder(holder: UserVH, position: Int) {
-        val currentUser = userList[position]
-        holder.titleTV.text = currentUser.title
-        holder.taskTV.text = currentUser.task
+    override fun onBindViewHolder(holder: TaskVH, position: Int) {
+        val currentTask = taskList[position]
+        holder.titleTV.text = currentTask.title
+        holder.taskTV.text = currentTask.task
+
+        // Configuração do CheckBox
+        holder.checkTask.setOnCheckedChangeListener(null)
+        holder.checkTask.isChecked = false
+        holder.checkTask.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                onTaskChecked?.invoke(currentTask) // Llama a la lambda al marcar
+            }
+        }
+
+        // Mejorar la interacción de los botones (editar y eliminar)
+        holder.editTask.setOnClickListener {
+            onEditClick?.invoke(currentTask)
+        }
+        holder.deleteTask.setOnClickListener {
+            onDeleteClick?.invoke(currentTask)
+        }
     }
 }

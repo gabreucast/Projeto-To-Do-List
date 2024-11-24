@@ -4,38 +4,82 @@
     <string name="app_name">Lista de Tarefas</string>
 
     <!-- Título da tela -->
-    <string name="title">Lista de tarefas</string>
+    <string name="title">Lista de Tarefas</string>
 
-    <!-- Placeholder para adicionar tarefa -->
+    <!-- Placeholder para o campo de adicionar tarefa -->
     <string name="addEditText">Nova Tarefa</string>
 
-    <!-- Botão para adicionar tarefa -->
+    <!-- Texto do botão para adicionar uma nova tarefa -->
     <string name="addButton">Adicionar Tarefa</string>
 
-    <!-- Título da lista de tarefas -->
+    <!-- Título para a lista de tarefas criadas -->
     <string name="createdTasks">Tarefas Criadas</string>
 
-    <!-- Botão para editar tarefa -->
+    <!-- Texto do botão para editar uma tarefa -->
     <string name="editButton">Editar</string>
 
-    <!-- Título de edição de tarefa -->
+    <!-- Título da tela de edição de tarefa -->
     <string name="editTask">Editar Tarefa</string>
 
-    <!-- Botão para salvar -->
+    <!-- Texto do botão para salvar as alterações feitas -->
     <string name="saveButton">Salvar</string>
 
-    <!-- Exemplo de titulo da tarefa -->
-    <string name="exemploTituloTarefa">Estudar </string>
+    <!-- Exemplo de título para a tarefa -->
+    <string name="tituloHint">Título</string>
 
-    <!-- Exemplo de tarefa -->
-    <string name="exemploTarefa">Estudar para examen da 5ta feira</string>
+    <!-- Exemplo de descrição da tarefa -->
+    <string name="tarefaHint">Descrição</string>
 
-    <!-- Status da tarefa: Deletada -->
-    <string name="statusDeleted">Deletada</string>
+    <!-- Status que indica que a tarefa foi deletada -->
+    <string name="statusFeita">Feita</string>
 
-    <!-- Botão para excluir a tarefa -->
-    <string name="buttonDeleteTask">Botão de Excluir Tarefa</string>
+    <!-- Texto do botão que exclui uma tarefa -->
+    <string name="buttonDeleteTask">Botão para Excluir Tarefa</string>
 
-    <!-- Botão para editar a tarefa -->
-    <string name="buttonEditTask">Botão de editar tarefa</string>
+    <!-- Texto do botão que edita uma tarefa -->
+    <string name="buttonEditTask">Botão para Editar Tarefa</string>
+
+    <!-- Texto do botão para cancelar uma ação -->
+    <string name="cancel">CANCELAR</string>
+
+    <!-- Título para a seção que exibe as notas deletadas -->
+    <string name="tarefaFeita">Tarefa Feitas</string>
+
+    <!-- Texto que descreve uma tarefa deletada -->
+    <string name="taskFeita">Conteúdo da Tarefa Feita</string>
+
+    <!-- Nome genérico da tarefa -->
+    <string name="task">Tarefa 1</string>
+
+    <!-- Título genérico de uma tarefa -->
+    <string name="titleTask">Título da Tarefa</string>
+
+    <!-- Mensagem de erro solicitando preenchimento de campos obrigatórios -->
+    <string name="inserir_campos">Por favor, preencha todos os campos.</string>
+
+    <!-- Mensagem de sucesso quando a tarefa é salva corretamente -->
+    <string name="tarefa_salva">Tarefa salva com sucesso!</string>
+
+    <!-- Título do diálogo de confirmação -->
+    <string name="confirm_title">Confirmação</string>
+
+    <!-- Mensagem do diálogo de confirmação para ações importantes -->
+    <string name="confirm_message">Você tem certeza de que deseja eliminar esta tarefa?</string>
+
+    <!-- Texto do botão positivo no diálogo de confirmação -->
+    <string name="confirm_positive">Sim</string>
+
+    <!-- Texto do botão negativo no diálogo de confirmação -->
+    <string name="confirm_negative">Não</string>
+
+    <!-- Mensagem indicando que a tarefa foi deletada -->
+    <string name="confirm_taskdeleted">Tarefa eliminada!</string>
+
+    <!-- Texto do botão para adicionar uma nova tarefa -->
+    <string name="addTask">Adicionar tarefa</string>
+
+    <!-- Texto do botão para atualizar uma tarefa -->
+    <string name="taskUpdated">Tarefa atualizada!</string>
+
+
 </resources>

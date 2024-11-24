@@ -8,37 +8,46 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="fragmentPrincipalCompletedTask">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="39" />
+                            <option name="y" value="119" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="fragment_principal_edit">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="141" />
-                            <option name="y" value="-99" />
+                            <option name="x" value="25" />
+                            <option name="y" value="-190" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_fragment_principal_edit_to_mainActivity3">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="fragmenthometodolist2">
+                  <entry key="mainActivity">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-65" />
-                            <option name="y" value="47" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="fragmentprincipalcompletedtask">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="134" />
-                            <option name="y" value="207" />
+                            <option name="x" value="-183" />
+                            <option name="y" value="79" />
                           </Point>
                         </option>
                       </LayoutPositions>

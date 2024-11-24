@@ -18,7 +18,7 @@
 
         <!-- CheckBox para marcar a tarefa como completa -->
         <CheckBox
-            android:id="@+id/checkTask1"
+            android:id="@+id/checkTask"
             style="@style/TaskCheckBoxStyle"
             android:layout_alignParentStart="true" />
 
@@ -26,20 +26,20 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTV"
             style="@style/TaskTextViewStyle"
-            android:layout_toEndOf="@id/checkTask1"
-            android:text="Title Task" />
+            android:layout_toEndOf="@id/checkTask"
+            android:text="@string/titleTask" />
 
             <!-- Texto da tarefa -->
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/taskTV"
             style="@style/TaskTextView"
             android:layout_below="@id/titleTV"
-            android:layout_toEndOf="@id/checkTask1"
-            android:text="Task 1" />
+            android:layout_toEndOf="@id/checkTask"
+            android:text="@string/task" />
 
         <!-- Botão para editar a tarefa -->
         <ImageView
-            android:id="@+id/editTask1"
+            android:id="@+id/editTask"
             style="@style/EditTaskImageViewStyle"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
@@ -47,12 +47,12 @@
 
         <!-- Botão para excluir a tarefa -->
         <ImageView
-            android:id="@+id/deleteTask1"
+            android:id="@+id/deleteTask"
             style="@style/DeleteTaskImageViewStyle"
-            android:layout_alignParentEnd="@id/editTask1"
+            android:layout_alignParentEnd="@id/editTask"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:layout_toStartOf="@id/editTask1"
+            android:layout_toStartOf="@id/editTask"
             android:contentDescription="@string/buttonDeleteTask" />
     </RelativeLayout>
 

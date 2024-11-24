@@ -4,14 +4,17 @@
     <selectionStates>
       <SelectionState runConfigName="MainActivity">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-11-17T02:28:29.589951500Z">
+        <DropdownSelection timestamp="2024-11-23T23:22:15.969154500Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\elska\.android\avd\Copy_of_Nexus_6P_API_35.avd" />
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=6e628fc5f5e2" />
             </handle>
           </Target>
         </DropdownSelection>
         <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="UpdateNoteFragment">
+        <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
   </component>
