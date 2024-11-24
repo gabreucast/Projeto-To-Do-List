@@ -31,7 +31,7 @@
     <string name="tarefaHint">Descrição</string>
 
     <!-- Status que indica que a tarefa foi deletada -->
-    <string name="statusDeleted">Deletada</string>
+    <string name="statusFeita">Feita</string>
 
     <!-- Texto do botão que exclui uma tarefa -->
     <string name="buttonDeleteTask">Botão para Excluir Tarefa</string>
@@ -43,10 +43,10 @@
     <string name="cancel">CANCELAR</string>
 
     <!-- Título para a seção que exibe as notas deletadas -->
-    <string name="notas_deletadas">Notas Deletadas</string>
+    <string name="tarefaFeita">Tarefa Feitas</string>
 
     <!-- Texto que descreve uma tarefa deletada -->
-    <string name="task_deleted">Conteúdo da nota deletada 1</string>
+    <string name="taskFeita">Conteúdo da Tarefa Feita</string>
 
     <!-- Nome genérico da tarefa -->
     <string name="task">Tarefa 1</string>
@@ -64,7 +64,7 @@
     <string name="confirm_title">Confirmação</string>
 
     <!-- Mensagem do diálogo de confirmação para ações importantes -->
-    <string name="confirm_message">Você tem certeza de que deseja continuar?</string>
+    <string name="confirm_message">Você tem certeza de que deseja eliminar esta tarefa?</string>
 
     <!-- Texto do botão positivo no diálogo de confirmação -->
     <string name="confirm_positive">Sim</string>
@@ -78,7 +78,8 @@
     <!-- Texto do botão para adicionar uma nova tarefa -->
     <string name="addTask">Adicionar tarefa</string>
 
-    <string name="taskUpdated">Tarefa atualizada</string>
+    <!-- Texto do botão para atualizar uma tarefa -->
+    <string name="taskUpdated">Tarefa atualizada!</string>
 
 
 </resources>

@@ -132,7 +132,7 @@
     <style name="TaskCheckBoxStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:color">@color/titleColor</item>
+        <item name="android:buttonTint">@color/white</item>
     </style>
 
     <!-- style para o TextView fragment_list -->
@@ -143,7 +143,7 @@
         <item name="android:textColor">@color/letraColor</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_toEndOf">@id/checkTask1</item>
+        <item name="android:layout_toEndOf">@id/checkTask</item>
     </style>
 
     <!-- Style para los textos de tarea -->
@@ -191,17 +191,17 @@
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:contentDescription">Deletada</item>
         <item name="android:src">@drawable/baseline_auto_delete_24</item>
-        <item name="android:tint">@color/deletedIconTint</item>
+        <item name="android:tint">@color/doneIconTint</item>
     </style>
 
-    <!-- style para o indicador de status "Deletada" fragment_completedtask -->
+    <!-- style para o indicador de status da tarefa "Feita" fragment_completedtask -->
     <style name="DeletedStatusTextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:layout_marginEnd">5dp</item>
         <item name="android:paddingStart">8dp</item>
-        <item name="android:textColor">@color/deletedIconTint</item>
+        <item name="android:textColor">@color/tarefaFeita</item>
         <item name="android:textStyle">italic</item>
     </style>
 

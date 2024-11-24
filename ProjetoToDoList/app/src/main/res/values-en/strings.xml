@@ -31,7 +31,7 @@
     <string name="tarefaHint">Description</string>
 
     <!-- Status indicating the task is deleted -->
-    <string name="statusDeleted">Deleted</string>
+    <string name="statusFeita">Done</string>
 
     <!-- Button text for deleting a task -->
     <string name="buttonDeleteTask">Delete Task Button</string>
@@ -43,10 +43,10 @@
     <string name="cancel">CANCEL</string>
 
     <!-- Title for the deleted notes section -->
-    <string name="notas_deletadas">Deleted Notes</string>
+    <string name="tarefaFeita">Task Done</string>
 
     <!-- Text for a deleted task -->
-    <string name="task_deleted">Deleted task content 1</string>
+    <string name="taskFeita">task Done Content</string>
 
     <!-- Generic task name -->
     <string name="task">Task 1</string>
@@ -64,7 +64,7 @@
     <string name="confirm_title">Confirmation</string>
 
     <!-- Confirmation dialog message -->
-    <string name="confirm_message">Are you sure you want to continue?</string>
+    <string name="confirm_message">Are you sure you want to eliminate this task?</string>
 
     <!-- Positive button text in the confirmation dialog -->
     <string name="confirm_positive">Yes</string>
@@ -77,7 +77,9 @@
 
     <!-- Button text for adding a new task -->
     <string name="addTask">Add Task</string>
-    <string name="taskUpdated">Tarefa atualizada</string>
+
+    <!-- Button text for updating a task -->
+    <string name="taskUpdated">Task updated</string>
 
 
 </resources>

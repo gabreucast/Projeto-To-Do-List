@@ -3,6 +3,7 @@ package ui
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -32,8 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         itemList = ArrayList()
         recyclerView = findViewById(R.id.taskRecyclerView)
-        recyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         // Configura o adapter da RecyclerView
         adapter = TaskAdapter(itemList)
@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
             tasks?.let {
                 itemList.clear()
                 itemList.addAll(it)
-                adapter.updateList(itemList)
                 adapter.notifyDataSetChanged()
             }
         }
@@ -66,6 +65,7 @@ class MainActivity : AppCompatActivity() {
             bundle.putBoolean("isEditing", true) // Indica que é para editar uma tarefa
             bundle.putString("title", task.title)
             bundle.putString("task", task.task)
+            bundle.putLong("taskId", task.id)
             fragment.arguments = bundle
             fragment.show(supportFragmentManager, "FragmentPrincipalEdit")
         }
@@ -73,21 +73,43 @@ class MainActivity : AppCompatActivity() {
         // Ação do botão de excluir tarefa
         adapter.onDeleteClick = { task ->
             val alertDialog = AlertDialog.Builder(this)
-                .setTitle(getString(R.string.confirm_title))
-                .setMessage(getString(R.string.confirm_message))
-                .setPositiveButton(getString(R.string.confirm_positive)) { dialog, which ->
+                .setTitle(getString(R.string.confirm_title)) // string: Confirmação
+                .setMessage(getString(R.string.confirm_message)) // string: Você tem certeza de que deseja continuar?
+                .setPositiveButton(getString(R.string.confirm_positive)) { dialog, which -> // string: Sim
                     Toast.makeText(
-                        this,
-                        getString(R.string.confirm_taskdeleted),
+                        this, getString(R.string.confirm_taskdeleted), //Tarefa eliminada!
                         Toast.LENGTH_SHORT
                     ).show()
                     viewModel.deleteTask(task)
                 }
-                .setNegativeButton(getString(R.string.confirm_negative)) { dialog, which ->
+                .setNegativeButton(getString(R.string.confirm_negative)) { dialog, which -> //string: Não
                     dialog.dismiss()
-                }
-                .create()
+                }.create()
             alertDialog.show()
         }
-    }
-}
+
+        // Ação do checkbox (marcar tarefa como concluída)
+        adapter.onTaskChecked = { task ->
+            val alertDialog = AlertDialog.Builder(this)
+                .setTitle(getString(R.string.confirm_title)) //string: Confirmação
+                .setMessage(getString(R.string.confirm_message)) //string: Você tem certeza de que deseja continuar?
+                .setPositiveButton(getString(R.string.confirm_positive)) { _, _ -> // string: Sim
+                    Toast.makeText(
+                        this, getString(R.string.confirm_taskdeleted), // string: Tarefa eliminada!
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    viewModel.deleteTask(task)
+                }
+                .setNegativeButton(getString(R.string.confirm_negative)) { dialog, _ -> // string: Não
+                    dialog.dismiss()
+                    recyclerView.findViewHolderForAdapterPosition(itemList.indexOf(task))
+                        ?.let { holder ->
+                            val checkBox =
+                                holder.itemView.findViewById<CheckBox>(R.id.checkTask) // string: Marcar tarefa como concluída
+                            checkBox.isChecked = false // Desmarca o CheckBox
+                        }
+                }.create()
+            alertDialog.show()
+        }  // chave do adapter.onTaskChecked
+    }  // chave do onCreate
+}  // chave da classe MainActivity

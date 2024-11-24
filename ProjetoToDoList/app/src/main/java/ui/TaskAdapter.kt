@@ -3,6 +3,7 @@ package ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -14,12 +15,15 @@ class TaskAdapter(private val taskList: MutableList<ListEntity>) :
 
     var onEditClick: ((ListEntity) -> Unit)? = null
     var onDeleteClick: ((ListEntity) -> Unit)? = null
+    var onTaskChecked: ((ListEntity) -> Unit)? = null
 
     inner class TaskVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTV: TextView = itemView.findViewById(R.id.titleTV)
         val taskTV: TextView = itemView.findViewById(R.id.taskTV)
         val deleteTask: ImageView = itemView.findViewById(R.id.deleteTask)
         val editTask: ImageView = itemView.findViewById(R.id.editTask)
+        val checkTask: CheckBox = itemView.findViewById(R.id.checkTask)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskVH {
@@ -38,20 +42,21 @@ class TaskAdapter(private val taskList: MutableList<ListEntity>) :
         holder.titleTV.text = currentTask.title
         holder.taskTV.text = currentTask.task
 
+        // Configuração do CheckBox
+        holder.checkTask.setOnCheckedChangeListener(null)
+        holder.checkTask.isChecked = false
+        holder.checkTask.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                onTaskChecked?.invoke(currentTask) // Llama a la lambda al marcar
+            }
+        }
+
         // Mejorar la interacción de los botones (editar y eliminar)
         holder.editTask.setOnClickListener {
-            onEditClick?.invoke(currentTask) // Llama al método de edición pasando la tarea
+            onEditClick?.invoke(currentTask)
         }
         holder.deleteTask.setOnClickListener {
-            onDeleteClick?.invoke(currentTask) // Llama al método de eliminación pasando la tarea
-        }
-    }
-
-    fun updateList(newList: List<ListEntity>) {
-        if (taskList != newList) {
-            taskList.clear()
-            taskList.addAll(newList)
-            notifyDataSetChanged() // Notifica el adaptador para que se actualice
+            onDeleteClick?.invoke(currentTask)
         }
     }
 }

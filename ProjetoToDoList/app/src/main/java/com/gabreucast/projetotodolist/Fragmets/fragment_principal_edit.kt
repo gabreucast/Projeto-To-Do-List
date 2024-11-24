@@ -13,28 +13,25 @@ import ui.MainViewModel
 
 class FragmentPrincipalEdit : DialogFragment() {
 
-    // Inicialização das variáveis para os campos de texto
     private lateinit var titleET: TextInputEditText
     private lateinit var taskET: TextInputEditText
     private lateinit var viewModel: MainViewModel
     private var isEditing: Boolean = false
 
-    // Método que cria o diálogo do fragmento
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val inflater = requireActivity().layoutInflater
         val view = inflater.inflate(R.layout.fragment_principal_edit, null)
 
-        // Verifica se estamos em modo de edição ou criação de tarefa
+        // Verifica se o fragmento está em modo de edição
         isEditing = arguments?.getBoolean("isEditing", false) ?: false
 
-        // Inicializa os campos de entrada de texto
         titleET = view.findViewById(R.id.titleET)
         taskET = view.findViewById(R.id.taskET)
 
-        // Inicializa o ViewModel para interagir com os dados
+        // Inicializa o ViewModel
         viewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
 
-        // Se estiver em modo de edição, carrega os dados da tarefa
+        // Se for edição, preenche os campos com os dados existentes
         if (isEditing) {
             val title = arguments?.getString("title")
             val task = arguments?.getString("task")
@@ -43,46 +40,49 @@ class FragmentPrincipalEdit : DialogFragment() {
             taskET.setText(task)
         }
 
-        // Criação do diálogo com título e botões
+        // Cria o dialog com a interface apropriada
         return MaterialAlertDialogBuilder(requireActivity(), theme).setView(view)
             .setTitle(if (isEditing) getString(R.string.editTask) else getString(R.string.addTask))
+                                                    // string: Editar Tarefa ou Adicionar Tarefa
             .setPositiveButton("OK") { dialog, _ ->
-                // Pega os valores digitados nos campos de texto
                 val title = titleET.text.toString().trim()
                 val task = taskET.text.toString().trim()
 
                 // Verifica se os campos estão preenchidos
                 if (title.isEmpty() || task.isEmpty()) {
-                    // Exibe um toast de erro caso algum campo esteja vazio
+                    // Exibe uma mensagem de erro se os campos estiverem vazios
                     Toast.makeText(
                         requireContext(),
-                        getString(R.string.inserir_campos),
+                        getString(R.string.inserir_campos), // string: Por favor, preencha todos os campos.
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
-                    val newTask = ListEntity(title = title, task = task)
-
                     if (isEditing) {
-                        // Se estamos editando, atualiza a tarefa existente
-                        viewModel.updateTask(newTask)
+                        // Atualiza a tarefa existente
+                        val taskId = arguments?.getLong("taskId") ?: 0
+                        val updatedTask = ListEntity(id = taskId, title = title, task = task)
+                        viewModel.updateTask(updatedTask)
+                        // Exibe mensagem de sucesso
                         Toast.makeText(
                             requireContext(),
-                            getString(R.string.taskUpdated),
+                            getString(R.string.taskUpdated), // string: Tarefa atualizada
                             Toast.LENGTH_SHORT
                         ).show()
                     } else {
-                        // Se não estamos editando, cria uma nova tarefa
+                        // Adiciona uma nova tarefa
+                        val newTask = ListEntity(title = title, task = task)
                         viewModel.addTask(newTask)
+                        // Exibe mensagem de sucesso
                         Toast.makeText(
                             requireContext(),
-                            getString(R.string.tarefa_salva),
+                            getString(R.string.tarefa_salva), // string: Tarefa salva com sucesso!
                             Toast.LENGTH_SHORT
                         ).show()
                     }
                     dismiss()
                 }
             }
-            // Caso o botão negativo seja pressionado, apenas fecha o diálogo
+                // Cancela e fecha o diálogo
             .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
                 dialog.dismiss()
             }
