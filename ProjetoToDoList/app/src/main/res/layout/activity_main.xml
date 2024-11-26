@@ -73,4 +73,17 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/fragment_task_list" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/emptyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No Task"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/doneIconTint"
+        android:visibility="gone" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
