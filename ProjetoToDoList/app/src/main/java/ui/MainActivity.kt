@@ -19,7 +19,6 @@ import model.ListEntity
 
 class MainActivity : AppCompatActivity() {
 
-    // Inicializa as variáveis
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: TaskAdapter
     private lateinit var itemList: MutableList<ListEntity>

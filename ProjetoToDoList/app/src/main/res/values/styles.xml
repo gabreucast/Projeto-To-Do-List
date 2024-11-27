@@ -26,7 +26,7 @@
 
     <!-- style para o EditText de adicionar tarefa -->
     <style name="AddTaskEditText">
-        <item name="android:textColor">@color/letraColor</item>
+        <item name="android:textColor">@color/taskColor</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:padding">12dp</item>
         <item name="android:layout_width">368dp</item>
@@ -140,17 +140,16 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingStart">10dp</item>
-        <item name="android:textColor">@color/letraColor</item>
+        <item name="android:textColor">@color/titleColor</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_toEndOf">@id/checkTask</item>
     </style>
-
     <!-- Style para los textos de tarea -->
     <style name="TaskTextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:textColor">@color/taskColor</item>
         <item name="android:paddingStart">10dp</item>
         <item name="android:textSize">16sp</item>
     </style>

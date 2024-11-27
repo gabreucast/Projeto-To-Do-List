@@ -7,7 +7,6 @@
     android:orientation="horizontal"
     android:padding="2dp"
     app:cardBackgroundColor="@color/cardview_shadow_end_color">
-    <!--  tools:showIn="@layout/taskRecyclerView"-->
 
     <RelativeLayout
         style="@style/TaskContainerStyle"
@@ -27,6 +26,8 @@
             android:id="@+id/titleTV"
             style="@style/TaskTextViewStyle"
             android:layout_toEndOf="@id/checkTask"
+            android:inputType="textCapCharacters"
+            android:layout_toStartOf="@id/deleteTask"
             android:text="@string/titleTask" />
 
             <!-- Texto da tarefa -->

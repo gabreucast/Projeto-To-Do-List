@@ -7,13 +7,13 @@
     <color name="titleColor">#F3F8F6</color>
 
     <!-- Cor para todas letras e editText -->
-    <color name="letraColor">#FFFFFF</color>
+    <color name="taskColor">#FFFFFF</color>
 
     <!-- Cor de fundo barra To Do List -->
-    <color name="fundoBarra">#0B1B6F</color>
+    <color name="fundoBarra">#008B69</color>
 
     <!-- Cor do botão de adicionar tarefa -->
-    <color name="addButton">#0B1B6F</color>
+    <color name="addButton">#008B69</color>
 
     <!-- colors verde da tarefa feita -->
     <color name="tarefaFeita">#8DF691</color>
