@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Fundo do Titulo e Imagem principal -->
     <View
         android:id="@+id/blueBackground"
         style="@style/ViewBackground"
@@ -15,7 +14,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Título da aplicação -->
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/titleTextView"
         style="@style/TitleText"
@@ -29,48 +27,76 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iconImageView"
         style="@style/ImageTitulo"
-        android:src="@drawable/baseline_list_alt_24"
         android:layout_marginStart="10dp"
+        android:src="@drawable/baseline_list_alt_24"
         app:layout_constraintStart_toStartOf="@id/blueBackground"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Botão para adicionar uma tarefa -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addButton"
         style="@style/AddButton"
+        android:layout_marginTop="30dp"
         android:drawableStart="@drawable/add_icone"
         android:text="@string/addButton"
-        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView" />
 
-    <!-- Título para a lista de tarefas -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView"
-        style="@style/TaskText"
-        android:layout_marginTop="10dp"
-        android:text="@string/createdTasks"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addButton" />
+        app:layout_constraintTop_toBottomOf="@id/addButton">
+        <RadioButton
+            android:id="@+id/pendingTasksRadioButton"
+            style="@style/TaskText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/createdTasks"
+            android:textSize="17sp" />
+        <RadioButton
+            android:id="@+id/completedTasksRadioButton"
+            style="@style/TaskText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Tarefas completadas"
+            android:textSize="17sp" />
+    </RadioGroup>
 
-    <!-- Linha divisória -->
     <View
         android:id="@+id/line"
         style="@style/Viewlinha"
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taskRecyclerView"
         style="@style/TaskRecyclerViewStyle"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line"
+        tools:listitem="@layout/fragment_task_list" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/completedTasksRecyclerView"
+        style="@style/TaskRecyclerViewStyle"
+        android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"
         tools:listitem="@layout/fragment_task_list" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -79,11 +105,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="No Task"
+        android:textColor="@color/doneIconTint"
         android:textSize="30sp"
-        app:layout_constraintTop_toBottomOf="@id/line"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/doneIconTint"
-        android:visibility="gone" />
+        app:layout_constraintTop_toBottomOf="@id/line" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

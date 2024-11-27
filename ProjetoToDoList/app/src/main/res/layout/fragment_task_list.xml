@@ -41,16 +41,16 @@
         <ImageView
             android:id="@+id/editTask"
             style="@style/EditTaskImageViewStyle"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
             android:contentDescription="@string/buttonEditTask" />
 
         <!-- Botão para excluir a tarefa -->
         <ImageView
             android:id="@+id/deleteTask"
             style="@style/DeleteTaskImageViewStyle"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="@id/editTask"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_toStartOf="@id/editTask"
             android:contentDescription="@string/buttonDeleteTask" />
