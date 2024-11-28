@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Fundo do Titulo e Imagem principal -->
+    <!-- Fundo do Título e Imagem principal -->
     <View
         android:id="@+id/blueBackground"
         style="@style/ViewBackground"
@@ -26,6 +26,7 @@
         app:layout_constraintStart_toEndOf="@+id/iconImageView"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Imagem ícone ao lado do título -->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iconImageView"
         style="@style/ImageTitulo"
@@ -63,6 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
 
+    <!-- RecyclerView para listar as tarefas -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taskRecyclerView"
         style="@style/TaskRecyclerViewStyle"
@@ -73,17 +75,14 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/fragment_task_list" />
 
+    <!-- Texto exibido quando não há tarefas -->
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/emptyTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        style="@style/EmptyTextViewStyle"
         android:text="@string/no_task"
-        android:textSize="30sp"
         app:layout_constraintTop_toBottomOf="@id/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/doneIconTint"
         android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,7 +45,7 @@ class FragmentPrincipalEdit : DialogFragment() {
             .setTitle(if (isEditing) getString(R.string.editTask) else getString(R.string.addTask))
                              // string: Editar Tarefa ou Adicionar Tarefa
             .setPositiveButton("OK") { dialog, _ ->
-                val title = titleET.text.toString().trim()
+                val title = titleET.text.toString().trim()  // trim para remover espaços em branco
                 val task = taskET.text.toString().trim()
 
                 // Verifica se os campos estão preenchidos

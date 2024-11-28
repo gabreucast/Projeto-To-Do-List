@@ -154,6 +154,15 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <!-- Estilo para o AppCompatTextView que exibe a mensagem de "Sem tarefas" -->
+    <style name="EmptyTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/doneIconTint</item>
+    </style>
+
     <!-- style para o ImageView do botão de editar tarefa fragment_list -->
     <style name="EditTaskImageViewStyle">
         <item name="android:layout_width">wrap_content</item>
