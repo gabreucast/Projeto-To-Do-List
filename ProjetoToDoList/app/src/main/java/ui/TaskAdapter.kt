@@ -61,11 +61,15 @@ class TaskAdapter(private val taskList: MutableList<ListEntity>) :
 
     } // llave del onBindViewHolder
 
+
+    /////////////////////////////////////////////////////////////////////////////////////////
     // Move um item de uma posição para outra na lista
     fun moveItem(fromPosition: Int, toPosition: Int) {
         val task = taskList.removeAt(fromPosition) // Remove o item da posição original
         taskList.add(toPosition, task) // Adiciona o item na nova posição
         notifyItemMoved(fromPosition, toPosition) // Notifica a mudança de posição
     }  // Fim de moveItem
+
+    /////////////////////////////////////////////////////////////////////////////////////////
 
 } // chave do TaskAdapter

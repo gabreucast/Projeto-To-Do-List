@@ -43,9 +43,9 @@ class FragmentPrincipalEdit : DialogFragment() {
         // Cria o dialog com a interface apropriada
         return MaterialAlertDialogBuilder(requireActivity(), theme).setView(view)
             .setTitle(if (isEditing) getString(R.string.editTask) else getString(R.string.addTask))
-                                                    // string: Editar Tarefa ou Adicionar Tarefa
+                             // string: Editar Tarefa ou Adicionar Tarefa
             .setPositiveButton("OK") { dialog, _ ->
-                val title = titleET.text.toString().trim()
+                val title = titleET.text.toString().trim()  // trim para remover espaços em branco
                 val task = taskET.text.toString().trim()
 
                 // Verifica se os campos estão preenchidos
@@ -58,7 +58,7 @@ class FragmentPrincipalEdit : DialogFragment() {
                     ).show()
                 } else {
                     if (isEditing) {
-                        // Atualiza a tarefa existente
+                        // Edita a tarefa existente
                         val taskId = arguments?.getLong("taskId") ?: 0
                         val updatedTask = ListEntity(id = taskId, title = title, task = task)
                         viewModel.updateTask(updatedTask)
@@ -87,5 +87,5 @@ class FragmentPrincipalEdit : DialogFragment() {
                 dialog.dismiss()
             }
             .create()
-    }
-}
+    } // chave do onCreateDialog
+} // chave do FragmentPrincipalEdit

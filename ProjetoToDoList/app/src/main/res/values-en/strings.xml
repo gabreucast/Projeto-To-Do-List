@@ -81,5 +81,8 @@
     <!-- Button text for updating a task -->
     <string name="taskUpdated">Task updated</string>
 
+    <!-- Texto do botão para avisar que não tem tarefas -->
+    <string name="no_task">SIN TAREAS</string>
+
 
 </resources>
