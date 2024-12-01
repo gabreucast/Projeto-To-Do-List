@@ -4,7 +4,7 @@
     <string name="app_name">Task List</string>
 
     <!-- Screen title -->
-    <string name="title">Task List</string>
+    <string name="title">Lista de Tarefas</string>
 
     <!-- Placeholder for adding a task -->
     <string name="addEditText">New Task</string>
@@ -81,8 +81,8 @@
     <!-- Button text for updating a task -->
     <string name="taskUpdated">Task updated</string>
 
-    <!-- Texto do botão para avisar que não tem tarefas -->
-    <string name="no_task">SIN TAREAS</string>
+    <!-- Texto do criar tarefa -->
+    <string name="create_task">Let\'s create a task!</string>
 
 
 </resources>

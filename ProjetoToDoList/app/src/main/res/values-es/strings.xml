@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Nombre de la aplicación -->
     <string name="app_name">Lista de Tareas</string>
 
     <!-- Título de la pantalla -->
-    <string name="title">Lista de Tareas</string>
+    <string name="title">Lista de Tarefas</string>
 
     <!-- Placeholder para agregar una tarea -->
     <string name="addEditText">Nueva Tarea</string>
@@ -81,7 +80,7 @@
     <!-- Texto del botón para actualizar una tarea -->
     <string name="taskUpdated">¡Tarea actualizada!</string>
 
-    <!-- Texto do botão para avisar que não tem tarefas -->
-    <string name="no_task">NO TASK</string>
+    <!-- Texto do criar tarefa -->
+    <string name="create_task">¡Vamos a crear una tarea!</string>
 
 </resources>

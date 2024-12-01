@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,7 +24,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: TaskAdapter
     private lateinit var itemList: MutableList<ListEntity>
     private lateinit var viewModel: MainViewModel
-    private lateinit var emptyTextView: TextView
+    private lateinit var emptyImageView: AppCompatImageView
+    private lateinit var createTaskTextView: TextView
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +38,8 @@ class MainActivity : AppCompatActivity() {
 
         itemList = ArrayList()
         recyclerView = findViewById(R.id.taskRecyclerView)
-        emptyTextView = findViewById(R.id.emptyTextView)
+        createTaskTextView = findViewById(R.id.createTaskTextView)
+        emptyImageView = findViewById(R.id.emptyImageView)
 
         // Configura a RecyclerView com LayoutManager
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
@@ -98,11 +101,13 @@ class MainActivity : AppCompatActivity() {
     private fun updateUI() {
         if (itemList.isEmpty()) {
             recyclerView.visibility = View.GONE
-            emptyTextView.visibility = View.VISIBLE
+            emptyImageView.visibility = View.VISIBLE
+            createTaskTextView.visibility = View.VISIBLE
         } else {
             recyclerView.visibility = View.VISIBLE
-            emptyTextView.visibility = View.GONE
-        }
-    } // Fim do updateUI
+            emptyImageView.visibility = View.GONE
+            createTaskTextView.visibility = View.GONE
+        }// Chave do else
+    } // Chave do updateUI
 
-}  // Fim da MainActivity
+}  // Chave da MainActivity

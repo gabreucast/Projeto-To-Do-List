@@ -9,7 +9,7 @@
 
     <!-- Fundo do Título e Imagem principal -->
     <View
-        android:id="@+id/blueBackground"
+        android:id="@+id/Background"
         style="@style/ViewBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
         android:text="@string/title"
-        app:layout_constraintEnd_toEndOf="@+id/blueBackground"
+        app:layout_constraintEnd_toEndOf="@+id/Background"
         app:layout_constraintStart_toEndOf="@+id/iconImageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,18 +30,20 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iconImageView"
         style="@style/ImageTitulo"
-        android:src="@drawable/baseline_list_alt_24"
         android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="@id/blueBackground"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginTop="5dp"
+        android:src="@drawable/baseline_list_alt_24"
+        app:layout_constraintEnd_toStartOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="@id/Background"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Botão para adicionar uma tarefa -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addButton"
         style="@style/AddButton"
+        android:layout_marginTop="30dp"
         android:drawableStart="@drawable/add_icone"
         android:text="@string/addButton"
-        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView" />
@@ -68,21 +70,35 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taskRecyclerView"
         style="@style/TaskRecyclerViewStyle"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/fragment_task_list" />
 
-    <!-- Texto exibido quando não há tarefas -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/emptyTextView"
-        style="@style/EmptyTextViewStyle"
-        android:text="@string/no_task"
-        app:layout_constraintTop_toBottomOf="@id/line"
+    <!-- Imagen exibida quando não há tarefas -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/emptyImageView"
+        android:layout_width="match_parent"
+        android:layout_height="501dp"
+        android:src="@drawable/empty_icon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone" />
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <TextView
+        android:id="@+id/createTaskTextView"
+        style="@style/CenteredTextViewStyle"
+        android:text="@string/create_task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintVertical_bias="0.855" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
