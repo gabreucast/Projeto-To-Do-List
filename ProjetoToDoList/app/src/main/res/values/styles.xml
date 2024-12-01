@@ -35,7 +35,7 @@
 
     <!-- style para o TextView Tarefas Criadas -->
     <style name="TaskText">
-        <item name="android:textColor">@color/fundoApp</item>
+        <item name="android:textColor">@color/letrasApp</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">wrap_content</item>
@@ -114,6 +114,16 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginEnd">16dp</item>
         <item name="android:src">@drawable/baseline_delete_24</item>
+    </style>
+
+    <!-- Estilo para el TextView -->
+    <style name="CenteredTextViewStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
     </style>
 
 </resources>
