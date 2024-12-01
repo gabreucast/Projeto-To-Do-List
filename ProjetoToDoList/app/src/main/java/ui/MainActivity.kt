@@ -92,57 +92,7 @@ class MainActivity : AppCompatActivity() {
                 .create()
             alertDialog.show()
         }
-
-        // Ação do checkbox (marcar tarefa como concluída)
-        adapter.onTaskChecked = { task ->
-            val alertDialog = AlertDialog.Builder(this)
-                .setTitle(getString(R.string.confirm_title)) // Título de confirmação
-                .setMessage(getString(R.string.confirm_message)) // Mensagem de confirmação
-                .setPositiveButton(getString(R.string.confirm_positive)) { _, _ -> // Confirmação positiva
-                    Toast.makeText(this, getString(R.string.confirm_taskdeleted), Toast.LENGTH_SHORT).show()
-                    viewModel.deleteTask(task) // Exclui a tarefa
-                }
-                .setNegativeButton(getString(R.string.confirm_negative)) { dialog, _ -> // Confirmação negativa
-                    dialog.dismiss() // Fecha o diálogo
-                    recyclerView.findViewHolderForAdapterPosition(itemList.indexOf(task))
-                        ?.let { holder ->
-                            val checkBox = holder.itemView.findViewById<CheckBox>(R.id.checkTask) // Referência ao CheckBox
-                            checkBox.isChecked = false // Desmarca o CheckBox
-                        }
-                }
-                .create()
-            alertDialog.show()
-        }
-
-        //////////////////////////////////////////////////////////////////////////////////////////
-        // Configuração do ItemTouchHelper (para permitir arrastar itens na lista)
-        val itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.Callback() {
-            override fun getMovementFlags(
-                recyclerView: RecyclerView,
-                viewHolder: RecyclerView.ViewHolder
-            ): Int {
-                val dragFlags = ItemTouchHelper.UP or ItemTouchHelper.DOWN
-                return makeMovementFlags(dragFlags, 0)
-            }
-
-            override fun onMove(
-                recyclerView: RecyclerView,
-                viewHolder: RecyclerView.ViewHolder,
-                target: RecyclerView.ViewHolder
-            ): Boolean {
-                val fromPosition = viewHolder.adapterPosition
-                val toPosition = target.adapterPosition
-                adapter.moveItem(fromPosition, toPosition) // Move o item na lista
-                return true
-            }
-
-            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                // Não faz nada ao deslizar o item
-            }
-        })
-        itemTouchHelper.attachToRecyclerView(recyclerView)
     }  // Fim do onCreate
-    ////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Função para atualizar a interface quando a lista estiver vazia ou não
     private fun updateUI() {

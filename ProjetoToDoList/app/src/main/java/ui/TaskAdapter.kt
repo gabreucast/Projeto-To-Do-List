@@ -22,7 +22,6 @@ class TaskAdapter(private val taskList: MutableList<ListEntity>) :
         val taskTV: TextView = itemView.findViewById(R.id.taskTV)
         val deleteTask: ImageView = itemView.findViewById(R.id.deleteTask)
         val editTask: ImageView = itemView.findViewById(R.id.editTask)
-        val checkTask: CheckBox = itemView.findViewById(R.id.checkTask)
 
     }
 
@@ -42,15 +41,6 @@ class TaskAdapter(private val taskList: MutableList<ListEntity>) :
         holder.titleTV.text = currentTask.title
         holder.taskTV.text = currentTask.task
 
-        // Configuração do CheckBox
-        holder.checkTask.setOnCheckedChangeListener(null)
-        holder.checkTask.isChecked = false
-        holder.checkTask.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                onTaskChecked?.invoke(currentTask) // Llama a la lambda al marcar
-            }
-        }
-
         // Mejorar la interacción de los botones (editar y eliminar)
         holder.editTask.setOnClickListener {
             onEditClick?.invoke(currentTask)
@@ -60,16 +50,5 @@ class TaskAdapter(private val taskList: MutableList<ListEntity>) :
         }
 
     } // llave del onBindViewHolder
-
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // Move um item de uma posição para outra na lista
-    fun moveItem(fromPosition: Int, toPosition: Int) {
-        val task = taskList.removeAt(fromPosition) // Remove o item da posição original
-        taskList.add(toPosition, task) // Adiciona o item na nova posição
-        notifyItemMoved(fromPosition, toPosition) // Notifica a mudança de posição
-    }  // Fim de moveItem
-
-    /////////////////////////////////////////////////////////////////////////////////////////
 
 } // chave do TaskAdapter
