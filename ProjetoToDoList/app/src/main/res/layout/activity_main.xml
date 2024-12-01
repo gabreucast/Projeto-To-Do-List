@@ -9,7 +9,7 @@
 
     <!-- Fundo do Título e Imagem principal -->
     <View
-        android:id="@+id/blueBackground"
+        android:id="@+id/Background"
         style="@style/ViewBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
         android:text="@string/title"
-        app:layout_constraintEnd_toEndOf="@+id/blueBackground"
+        app:layout_constraintEnd_toEndOf="@+id/Background"
         app:layout_constraintStart_toEndOf="@+id/iconImageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,8 +31,10 @@
         android:id="@+id/iconImageView"
         style="@style/ImageTitulo"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:src="@drawable/baseline_list_alt_24"
-        app:layout_constraintStart_toStartOf="@id/blueBackground"
+        app:layout_constraintEnd_toStartOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="@id/Background"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Botão para adicionar uma tarefa -->
