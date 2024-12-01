@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Cor de fundo principal da aplicação -->
-    <color name="white">#FFFFFFFF</color>
+    <!-- Cor de preto letras -->
+    <color name="letrasApp">#000000</color>
 
-    <!-- Cor para o título da aplicação e título da lista de tarefas -->
-    <color name="titleColor">#F3F8F6</color>
+    <!-- Cor do icone principal -->
+    <color name="doneIconprincipal">#611661</color> 1621E0FF 611661FF
 
-    <!-- Cor para todas letras e editText -->
-    <color name="taskColor">#FFFFFF</color>
-
-    <!-- Cor de fundo barra To Do List -->
-    <color name="fundoBarra">#008B69</color>
-
-    <!-- Cor do botão de adicionar tarefa -->
-    <color name="addButton">#008B69</color>
+    <!-- Cor de verde de fundo de tudo o app -->
+    <color name="fundoApp">#9191</color>
 
     <!-- colors verde da tarefa feita -->
     <color name="tarefaFeita">#8DF691</color>
 
-    <!-- colors verde do icone lixeira -->
-    <color name="doneIconTint">#DE0404</color>
+    <!-- colors verde dos icones -->
+    <color name="iconesTint">#2B5166</color>
 
 </resources>

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- fragment_home_to_do_list -->
     <!-- style para o fundo do Título e Imagem Principal -->
     <style name="ViewBackground">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">80dp</item>
-        <item name="android:background">@color/fundoBarra</item>
+        <item name="android:background">@color/fundoApp</item>
     </style>
 
     <!-- style para o título -->
     <style name="TitleText">
-        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:textColor">@color/letrasApp</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">wrap_content</item>
@@ -24,19 +23,10 @@
         <item name="android:layout_height">70dp</item>
     </style>
 
-    <!-- style para o EditText de adicionar tarefa -->
-    <style name="AddTaskEditText">
-        <item name="android:textColor">@color/taskColor</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:padding">12dp</item>
-        <item name="android:layout_width">368dp</item>
-        <item name="android:layout_height">44dp</item>
-    </style>
-
-    <!-- estilo para o botão de criar tarefa -->
+    <!-- style para o botão de criar tarefa -->
     <style name="AddButton">
-        <item name="android:backgroundTint">@color/addButton</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint">@color/fundoApp</item>
+        <item name="android:textColor">@color/letrasApp</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">match_parent</item>
@@ -45,7 +35,7 @@
 
     <!-- style para o TextView Tarefas Criadas -->
     <style name="TaskText">
-        <item name="android:textColor">@color/addButton</item>
+        <item name="android:textColor">@color/fundoApp</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">wrap_content</item>
@@ -56,14 +46,7 @@
     <style name="Viewlinha">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">3dp</item>
-        <item name="android:background">@color/addButton</item>
-    </style>
-
-    <!-- style para o ícone do botão de Editar Tarefa -->
-    <style name="ImageEditar">
-        <item name="android:layout_width">70dp</item>
-        <item name="android:layout_height">70dp</item>
-        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@color/fundoApp</item>
     </style>
 
     <!-- style para o RecyclerView de tarefas fragment_task -->
@@ -75,81 +58,35 @@
         <item name="android:paddingBottom">16dp</item>
     </style>
 
-    <!-- fragment_list -->
-    <!-- style para o título do texto fragment_edit -->
-    <style name="TaskTitleText">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/addButton</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:layout_marginTop">15dp</item>
-    </style>
-
-    <!-- style para o EditText Titulo  fragment_edit -->
-    <style name="TaskEditText">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/aqua_borde</item>
-        <item name="android:hint">@string/tituloHint</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:padding">10dp</item>
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
-    <!-- style para o EditText Tarefa fragment_edit -->
-    <style name="TaskEditText2">
-        <item name="android:layout_width">250dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/aqua_borde</item>
-        <item name="android:hint">@string/tarefaHint</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:padding">12dp</item>
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
-    <!-- style para o FloatingActionButton fragment_edit -->
-    <style name="EditNoteFab">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">50dp</item>
-        <item name="android:backgroundTint">@color/addButton</item>
-        <item name="android:contentDescription">@string/saveButton</item>
-        <item name="android:src">@drawable/baseline_done_24</item>
-    </style>
-
-    <!-- Fragmento para a lista de tarefas -->
     <!-- style para o contêiner do ConstraintLayout fragment_list -->
     <style name="TaskContainerStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@color/fundoBarra</item>
+        <item name="android:background">@color/fundoApp</item>
     </style>
 
     <!-- style para o CheckBox fragment_list -->
     <style name="TaskCheckBoxStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:buttonTint">@color/white</item>
+        <item name="android:buttonTint">@color/letrasApp</item>
     </style>
 
-    <!-- style para o TextView fragment_list -->
+    <!-- style para tarefa do recyclerview-->
     <style name="TaskTextViewStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingStart">10dp</item>
-        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:textColor">@color/letrasApp</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_toEndOf">@id/checkTask</item>
     </style>
+
     <!-- Style para los textos de tarea -->
     <style name="TaskTextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/taskColor</item>
+        <item name="android:textColor">@color/letrasApp</item>
         <item name="android:paddingStart">10dp</item>
         <item name="android:textSize">16sp</item>
     </style>
@@ -160,10 +97,10 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textSize">30sp</item>
-        <item name="android:textColor">@color/doneIconTint</item>
+        <item name="android:textColor">@color/iconesTint</item>
     </style>
 
-    <!-- style para o ImageView do botão de editar tarefa fragment_list -->
+    <!-- style para o ImageView do botão de editar tarefa-->
     <style name="EditTaskImageViewStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -171,66 +108,12 @@
         <item name="android:src">@drawable/baseline_edit_24</item>
     </style>
 
-    <!-- style para o ImageView do botão de excluir tarefa fragment_list -->
+    <!-- style para o ImageView do botão de excluir tarefa-->
     <style name="DeleteTaskImageViewStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginEnd">16dp</item>
         <item name="android:src">@drawable/baseline_delete_24</item>
-    </style>
-
-    <!-- fragment_completedtask -->
-    <!-- style para o título da nota deletada fragment_completedtask -->
-    <style name="DeletedNoteTitleText">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/titleColor</item>
-        <item name="android:backgroundTint">@color/cardview_dark_background</item>
-    </style>
-
-    <!-- style para o ícone de deletada fragment_completedtask -->
-    <style name="DeletedIconImageView">
-        <item name="android:layout_width">24dp</item>
-        <item name="android:layout_height">24dp</item>
-        <item name="android:layout_marginStart">12dp</item>
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:contentDescription">Deletada</item>
-        <item name="android:src">@drawable/baseline_auto_delete_24</item>
-        <item name="android:tint">@color/doneIconTint</item>
-    </style>
-
-    <!-- style para o indicador de status da tarefa "Feita" fragment_completedtask -->
-    <style name="DeletedStatusTextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:layout_marginEnd">5dp</item>
-        <item name="android:paddingStart">8dp</item>
-        <item name="android:textColor">@color/tarefaFeita</item>
-        <item name="android:textStyle">italic</item>
-    </style>
-
-    <!-- style para o conteúdo da nota deletada fragment_completedtask -->
-    <style name="DeletedNoteContentTextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:layout_marginStart">12dp</item>
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/titleColor</item>
-    </style>
-
-    <!-- fragment_deletednotes -->
-    <!-- style para o RecyclerView de notas deletadas fragment_deletednotes -->
-    <style name="DeletedNotesRecyclerViewStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">600dp</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:clipToPadding">false</item>
-        <item name="android:paddingBottom">16dp</item>
     </style>
 
 </resources>
